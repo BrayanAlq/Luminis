@@ -23,7 +23,7 @@ void ejecutarMaestro(int world_size) {
     cout << "[MASTER] Iniciando gestor de distribución.\n";
 
     // Lista local de imágenes (puede leerse y repartirse)
-    vector<string> rutas = listarImagenesEnCarpeta("data/input/");
+    vector<string> rutas = listarImagenesEnCarpeta("imagenes_entrada");
     int total = (int)rutas.size();
     if (world_size <= 1) {
         cout << "[MASTER] No hay esclavos. Fin.\n";
@@ -71,7 +71,7 @@ void ejecutarEsclavo(int rank) {
     cout << "[WORKER " << rank << "] Recibido rango ["<< inicio <<","<< fin <<")\n";
 
     // obtener lista completa (cada worker puede leer la lista y tomar su parte)
-    vector<string> rutas = listarImagenesEnCarpeta("data/input/");
+    vector<string> rutas = listarImagenesEnCarpeta("imagenes_entrada");
     if (inicio < 0) inicio = 0;
     if (fin > (int)rutas.size()) fin = rutas.size();
 

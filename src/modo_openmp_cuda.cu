@@ -1,13 +1,14 @@
-#include <opencv2/opencv.hpp>
 #include <iostream>
 #include <vector>
-#include <filesystem>
+#include <string>
+#include <opencv2/opencv.hpp>
+#include <experimental/filesystem>
 #include <omp.h>
 #include <cuda_runtime.h>
 
-using namespace std;
-namespace fs = std::filesystem;
 
+using namespace std;
+namespace fs = std::experimental::filesystem;
 // ===============================
 //   KERNEL CUDA CON LUT
 // ===============================
@@ -90,7 +91,7 @@ int ejecutarModoOpenMPCUDA()
 
     vector<string> archivos;
     for (const auto &entry : fs::directory_iterator(rutaEntrada))
-        if (entry.is_regular_file())
+            if (fs::is_regular_file(entry.path()))
             archivos.push_back(entry.path().string());
 
     cout << "=== Ecualización de Histograma (OpenMP + CUDA con LUT) ===" << endl;
@@ -117,3 +118,4 @@ int ejecutarModoOpenMPCUDA()
     cout << "Proceso híbrido (OpenMP+CUDA) completado." << endl;
     return 0;
 }
+

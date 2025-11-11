@@ -1,6 +1,6 @@
 // procesamiento_gpu.cu
 #include <cuda_runtime.h>
-#include <vector>ñ
+#include <vector>
 #include <iostream>
 #include <opencv2/opencv.hpp>
 
@@ -8,7 +8,7 @@ using namespace std;
 
 // Ejemplo simple: calculamos CDF en host y mostramos (placeholder)
 // En implementación completa aquí copiarías CDF a device, ejecutarías kernel que aplica LUT sobre la imagen
-extern "C" void postprocesar_en_GPU(const std::vector<int>& histGlobal) {
+    void postprocesar_en_GPU(const std::vector<int>& histGlobal) {
     // calcular CDF (host)
     int cdf[256];
     cdf[0] = histGlobal[0];
