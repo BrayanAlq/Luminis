@@ -6,13 +6,13 @@
 #include <omp.h>
 #include <cuda_runtime.h>
 
-
 using namespace std;
 namespace fs = std::experimental::filesystem;
+
 // ===============================
-//   KERNEL CUDA CON LUT
+//   KERNEL CUDA CON LUT (RENOMBRADO)
 // ===============================
-__global__ void aplicarLUTKernel(const unsigned char* img, unsigned char* salida, const unsigned char* LUT, int totalPix)
+__global__ void aplicarLUTKernelOpenMP(const unsigned char* img, unsigned char* salida, const unsigned char* LUT, int totalPix)
 {
     int i = blockIdx.x * blockDim.x + threadIdx.x;
     if (i < totalPix)
@@ -43,7 +43,7 @@ cv::Mat ecualizarHistogramaCUDA(const cv::Mat &imgGray)
     for (int i = 0; i < 256; i++)
         if (cdf[i] > 0) { cdf_min = cdf[i]; break; }
 
-    // Generar LUT (Look-Up Table)
+    // Generar LUT
     vector<unsigned char> LUT(256);
     for (int i = 0; i < 256; i++)
     {
@@ -65,7 +65,9 @@ cv::Mat ecualizarHistogramaCUDA(const cv::Mat &imgGray)
     // Kernel
     int blockSize = 256;
     int numBlocks = (totalPix + blockSize - 1) / blockSize;
-    aplicarLUTKernel<<<numBlocks, blockSize>>>(d_img, d_out, d_LUT, totalPix);
+
+    // 🔥 LLAMADA ACTUALIZADA AL NUEVO KERNEL
+    aplicarLUTKernelOpenMP<<<numBlocks, blockSize>>>(d_img, d_out, d_LUT, totalPix);
     cudaDeviceSynchronize();
 
     // Copiar resultado
@@ -91,7 +93,7 @@ int ejecutarModoOpenMPCUDA()
 
     vector<string> archivos;
     for (const auto &entry : fs::directory_iterator(rutaEntrada))
-            if (fs::is_regular_file(entry.path()))
+        if (fs::is_regular_file(entry.path()))
             archivos.push_back(entry.path().string());
 
     cout << "=== Ecualización de Histograma (OpenMP + CUDA con LUT) ===" << endl;

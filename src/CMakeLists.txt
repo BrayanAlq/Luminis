@@ -15,6 +15,8 @@ set(CPP_SOURCES
     preprocesamiento.cpp
     modo_serial.cpp
     modo_mpi_openmp_cuda.cpp
+    filesystem_utils.cpp
+    placeholder.cpp 
 )
 
 set(CUDA_SOURCE
