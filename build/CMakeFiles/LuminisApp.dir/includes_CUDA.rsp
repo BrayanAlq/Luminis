@@ -1,0 +1,1 @@
+-I/home/david/Luminis/src -I"/opt/openmpi-5.0.8/include" -isystem /usr/include/opencv4
