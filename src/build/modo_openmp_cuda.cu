@@ -2,13 +2,12 @@
 #include <vector>
 #include <string>
 #include <opencv2/opencv.hpp>
-#include <experimental/filesystem>
+#include <filesystem>
 #include <omp.h>
 #include <cuda_runtime.h>
 
-
 using namespace std;
-namespace fs = std::experimental::filesystem;
+namespace fs = std::filesystem;
 // ===============================
 //   KERNEL CUDA CON LUT
 // ===============================
@@ -119,3 +118,6 @@ int ejecutarModoOpenMPCUDA()
     return 0;
 }
 
+int main() {
+    return ejecutarModoOpenMPCUDA();
+}

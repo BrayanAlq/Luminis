@@ -27,7 +27,7 @@ void guardarResultadoPlaceholder(); // Placeholder
 void ejecutarMaestro(int world_size) {
     cout << "[MASTER] Iniciando gestor de distribución (MODO LUT: Pool of Workers).\n";
 
-    vector<string> rutas = listarImagenesEnCarpeta("data/input/");
+    vector<string> rutas = listarImagenesEnCarpeta("imagenes_entrada");
     int numWorkers = world_size - 1;
     if (numWorkers == 0) {
         cout << "[MASTER] No hay esclavos. Fin.\n";
