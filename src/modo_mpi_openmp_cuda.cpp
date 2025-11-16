@@ -1,4 +1,3 @@
-// main.cpp
 #include <mpi.h>
 #include <iostream>
 
