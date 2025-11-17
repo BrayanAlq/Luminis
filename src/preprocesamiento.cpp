@@ -1,5 +1,3 @@
-// preprocesamiento.cpp (FINAL: Implementa el cálculo de LUT con OpenMP)
-
 #include <opencv2/opencv.hpp>
 #include <omp.h>
 #include <vector>
@@ -7,7 +5,7 @@
 #include <filesystem>
 #include <iostream>
 #include <algorithm>
-#include <cmath> // Para std::round
+#include <cmath> 
 
 using namespace std;
 namespace fs = std::filesystem;
@@ -25,7 +23,7 @@ std::vector<std::string> listarImagenesEnCarpeta(const std::string& carpeta) {
 }
 
 // -----------------------------------------------------------------------------
-// Función Principal del Worker: Calcula Histograma, CDF y LUT
+// Función de cálculo individual: Calcula Histograma, CDF y LUT (Optimizada con OpenMP)
 // -----------------------------------------------------------------------------
 std::vector<unsigned char> preprocesarImagenYCalcularLUT(const std::string& ruta) {
     cv::Mat img = cv::imread(ruta, cv::IMREAD_GRAYSCALE);
@@ -37,13 +35,12 @@ std::vector<unsigned char> preprocesarImagenYCalcularLUT(const std::string& ruta
         return lut;
     }
     
-    // 1. CÁLCULO DEL HISTOGRAMA
+    // 1. CÁLCULO DEL HISTOGRAMA (Paralelizado con OpenMP)
     vector<int> hist(256, 0);
     long long totalPixels = (long long)img.rows * img.cols;
     
     #pragma omp parallel 
     {
-        // 1.1. Inicialización local y conteo de píxeles
         vector<int> histLocal(256, 0); 
         
         #pragma omp for nowait
@@ -54,14 +51,13 @@ std::vector<unsigned char> preprocesarImagenYCalcularLUT(const std::string& ruta
             }
         }
         
-        // 1.2. Suma final de los histogramas locales (Área crítica de sincronización)
         #pragma omp critical
         {
             for (int k = 0; k < 256; ++k) hist[k] += histLocal[k];
         }
-    } // Fin de la región parallel para el Histograma
+    } 
     
-    // 2. CÁLCULO DE LA CDF (Función de Distribución Acumulada)
+    // 2. CÁLCULO DE LA CDF 
     vector<long long> cdf(256, 0);
     cdf[0] = hist[0];
     int min_val = (hist[0] > 0) ? 0 : -1; 
@@ -73,7 +69,7 @@ std::vector<unsigned char> preprocesarImagenYCalcularLUT(const std::string& ruta
         }
     }
     
-    // 3. CÁLCULO DE LA LUT (Tabla de Búsqueda)
+    // 3. CÁLCULO DE LA LUT
     if (totalPixels == 0 || min_val == -1) {
          for (int i = 0; i < 256; ++i) lut[i] = (unsigned char)i;
          return lut;
@@ -88,7 +84,6 @@ std::vector<unsigned char> preprocesarImagenYCalcularLUT(const std::string& ruta
         return lut;
     }
 
-    // USO ADICIONAL DE OPENMP: Paralelismo del bucle de 256 iteraciones.
     #pragma omp parallel for
     for (int i = 0; i < 256; ++i) {
         if (cdf[i] == 0) {
@@ -100,4 +95,19 @@ std::vector<unsigned char> preprocesarImagenYCalcularLUT(const std::string& ruta
     }
     
     return lut;
+}
+
+// -----------------------------------------------------------------------------
+// Función de Lote para el Worker (Llamada por gestor_distribucion.cpp)
+// -----------------------------------------------------------------------------
+std::vector<unsigned char> preprocesarLoteYCalcularLUTs(const std::vector<std::string>& rutas) {
+    std::vector<unsigned char> lut_data_batch;
+    
+    // Se procesa cada imagen secuencialmente, permitiendo que la función interna use OpenMP
+    for (const auto& ruta : rutas) {
+        std::vector<unsigned char> lut = preprocesarImagenYCalcularLUT(ruta);
+        lut_data_batch.insert(lut_data_batch.end(), lut.begin(), lut.end());
+    }
+    
+    return lut_data_batch;
 }

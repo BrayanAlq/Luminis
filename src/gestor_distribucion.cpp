@@ -2,129 +2,160 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include <algorithm> // Para std::min
+#include <algorithm>
+#include <sstream>
+#include <cmath>
 
 using namespace std;
 
-// --- CONSTANTES MPI ---
-// Usaremos estas etiquetas para que la comunicación sea clara
-const int TAG_NUEVA_TAREA = 10;      // Maestro a Worker: Envía la ruta de la imagen a procesar
-const int TAG_LUT = 20;              // Worker a Maestro: Envía el array de la LUT
-const int TAG_RUTA_COMPLETADA = 21;  // Worker a Maestro: Envía la ruta del archivo procesado
-const int TAG_FIN = 30;              // Maestro a Worker: Señal de terminación
-const int LUT_SIZE = 256;            // El tamaño de la LUT siempre es 256 (unsigned char)
+// --- CONSTANTES MPI Y DE LOTE ---
+const int BATCH_SIZE = 5; // <--- Tamaño del lote (ajustable para optimizar)
+const int TAG_NUEVA_TAREA = 10;
+const int TAG_RESULTADO = 20;
+const int TAG_RUTA_COMPLETADA = 21; // Usaremos TAG_RESULTADO + 1
+const int LUT_SIZE = 256;
 
 // --- PROTOTIPOS DE FUNCIONES EXTERNAS ---
-// Estas funciones DEBES definirlas en otros archivos (.cpp, .cu o .hpp)
 std::vector<std::string> listarImagenesEnCarpeta(const std::string& carpeta);
-std::vector<unsigned char> preprocesarImagenYCalcularLUT(const std::string& ruta); // Lógica del Worker (CPU)
-void aplicarLUTCUDA(const std::string& ruta, const std::vector<unsigned char>& lut); // Lógica del Maestro (GPU)
-void guardarResultadoPlaceholder(); // Placeholder
+std::vector<unsigned char> preprocesarLoteYCalcularLUTs(const std::vector<std::string>& rutas); 
+void aplicarLUTCUDA_Lote(const std::vector<std::string>& rutas, const std::vector<unsigned char>& lut_data); 
+void guardarResultadoPlaceholder(); 
 
-// --- FUNCIONES INTERNAS ---
+// --- FUNCIONES INTERNAS DE UTILIDAD ---
 
-// 1. Ejecuta rol del MAESTRO (Rank 0)
-void ejecutarMaestro(int world_size) {
-    cout << "[MASTER] Iniciando gestor de distribución (MODO LUT: Pool of Workers).\n";
+// Ayudante: Convierte un vector de rutas a una cadena separada por '\n'
+std::string rutasAVector(const std::vector<std::string>& rutas) {
+    if (rutas.empty()) return "";
+    std::stringstream ss;
+    for (const auto& r : rutas) ss << r << "\n";
+    return ss.str();
+}
 
-    vector<string> rutas = listarImagenesEnCarpeta("imagenes_entrada");
-    int numWorkers = world_size - 1;
-    if (numWorkers == 0) {
-        cout << "[MASTER] No hay esclavos. Fin.\n";
-        return;
+// Ayudante: Convierte la cadena de rutas recibida de vuelta a un vector
+std::vector<std::string> vectorARutas(const std::string& str) {
+    std::vector<std::string> rutas;
+    if (str.empty()) return rutas;
+    std::stringstream ss(str);
+    std::string ruta;
+    while (std::getline(ss, ruta, '\n')) {
+        if (!ruta.empty()) rutas.push_back(ruta);
     }
+    return rutas;
+}
 
-    int numTareas = (int)rutas.size();
+// -----------------------------------------------------------------------------
+// 1. Ejecuta rol del MAESTRO (Rank 0)
+// -----------------------------------------------------------------------------
+void ejecutarMaestro(int world_size) {
+    cout << "[MASTER] Iniciando gestor de distribución (MODO LOTE, size=" << BATCH_SIZE << ").\n";
+
+    vector<string> rutas_globales = listarImagenesEnCarpeta("data/input/");
+    int numWorkers = world_size - 1;
+    if (numWorkers == 0) { cout << "[MASTER] No hay esclavos. Fin.\n"; return; }
+
+    int numTareas = (int)rutas_globales.size();
     int tareasEnviadas = 0;
     int tareasCompletadas = 0;
     MPI_Status status;
-    
-    // 2. Reparto inicial: Una tarea a cada Worker disponible
+    int longitud_buffer_max = (BATCH_SIZE * (256 + 1));
+
+    // 2. Reparto inicial: Una tarea (lote de rutas) a cada Worker
     for (int rank = 1; rank < world_size; ++rank) {
         if (tareasEnviadas < numTareas) {
-            const string& ruta = rutas[tareasEnviadas];
-            // ENVIAR TAREA (Ruta)
-            MPI_Send(ruta.c_str(), ruta.length() + 1, MPI_CHAR, rank, TAG_NUEVA_TAREA, MPI_COMM_WORLD);
-            cout << "[MASTER] Enviada tarea '" << ruta << "' al Worker " << rank << "\n";
-            tareasEnviadas++;
+            int fin = std::min(tareasEnviadas + BATCH_SIZE, numTareas);
+            std::vector<std::string> lote(rutas_globales.begin() + tareasEnviadas, rutas_globales.begin() + fin);
+            std::string rutas_str = rutasAVector(lote);
+            
+            MPI_Send(rutas_str.c_str(), rutas_str.length() + 1, MPI_CHAR, rank, TAG_NUEVA_TAREA, MPI_COMM_WORLD);
+            cout << "[MASTER] Enviado lote [" << tareasEnviadas << "-" << fin << ") al Worker " << rank << "\n";
+            tareasEnviadas = fin;
         }
     }
     
     // 3. Pool of Workers: Bucle de Recepción y Reenvío
     while (tareasCompletadas < numTareas) {
-        char ruta_buffer[256]; 
-        vector<unsigned char> lut_recv(LUT_SIZE);
-
-        // A. Esperar y Recibir la LUT (Bloqueante: asegura que un worker está listo)
-        MPI_Recv(lut_recv.data(), LUT_SIZE, MPI_UNSIGNED_CHAR, MPI_ANY_SOURCE, TAG_LUT, MPI_COMM_WORLD, &status);
+        char buffer_rutas_completadas[longitud_buffer_max];
+        int num_bytes_lut;
+        
+        // A. Esperar y Recibir LUTs
+        MPI_Probe(MPI_ANY_SOURCE, TAG_RESULTADO, MPI_COMM_WORLD, &status);
+        MPI_Get_count(&status, MPI_UNSIGNED_CHAR, &num_bytes_lut);
+        std::vector<unsigned char> lut_data(num_bytes_lut);
         int worker_rank = status.MPI_SOURCE;
+        
+        MPI_Recv(lut_data.data(), num_bytes_lut, MPI_UNSIGNED_CHAR, worker_rank, TAG_RESULTADO, MPI_COMM_WORLD, &status);
+        
+        // B. Recibir las rutas completadas
+        MPI_Recv(buffer_rutas_completadas, longitud_buffer_max, MPI_CHAR, worker_rank, TAG_RUTA_COMPLETADA, MPI_COMM_WORLD, &status);
+        std::vector<std::string> rutas_completadas = vectorARutas(buffer_rutas_completadas);
 
-        // B. Recibir el nombre de la imagen que corresponde a esta LUT
-        MPI_Recv(ruta_buffer, 256, MPI_CHAR, worker_rank, TAG_RUTA_COMPLETADA, MPI_COMM_WORLD, &status);
-        string ruta_completada(ruta_buffer);
-
-        tareasCompletadas++;
-        cout << "[MASTER] Recibida LUT para '" << ruta_completada << "' del Worker " << worker_rank 
+        int lote_completado = (int)rutas_completadas.size();
+        tareasCompletadas += lote_completado;
+        cout << "[MASTER] Recibido lote de " << lote_completado << " items de Worker " << worker_rank 
              << ". Completadas: " << tareasCompletadas << "/" << numTareas << "\n";
         
-        // C. Aplicación de la LUT con CUDA (Usa la GPU del Maestro)
-        aplicarLUTCUDA(ruta_completada, lut_recv); 
+        // C. Aplicación de la LUTs con CUDA
+        aplicarLUTCUDA_Lote(rutas_completadas, lut_data); 
 
-        // D. Asignar nueva tarea al Worker que acaba de terminar (si hay más)
+        // D. Asignar nueva tarea al Worker que acaba de terminar
         if (tareasEnviadas < numTareas) {
-            const string& ruta_nueva = rutas[tareasEnviadas];
-            MPI_Send(ruta_nueva.c_str(), ruta_nueva.length() + 1, MPI_CHAR, worker_rank, TAG_NUEVA_TAREA, MPI_COMM_WORLD);
-            cout << "[MASTER] Enviada NUEVA tarea '" << ruta_nueva << "' al Worker " << worker_rank << "\n";
-            tareasEnviadas++;
+            int fin = std::min(tareasEnviadas + BATCH_SIZE, numTareas);
+            std::vector<std::string> lote(rutas_globales.begin() + tareasEnviadas, rutas_globales.begin() + fin);
+            std::string rutas_str = rutasAVector(lote);
+            
+            MPI_Send(rutas_str.c_str(), rutas_str.length() + 1, MPI_CHAR, worker_rank, TAG_NUEVA_TAREA, MPI_COMM_WORLD);
+            cout << "[MASTER] Enviado NUEVO lote [" << tareasEnviadas << "-" << fin << ") al Worker " << worker_rank << "\n";
+            tareasEnviadas = fin;
+        } else {
+            // Enviar señal de terminación (cadena vacía)
+            MPI_Send("", 1, MPI_CHAR, worker_rank, TAG_NUEVA_TAREA, MPI_COMM_WORLD);
         }
-    }
-
-    // 4. Señal de terminación: Enviar la señal de fin a todos los Workers
-    // Ya que los Workers que terminaron sus tareas se quedan esperando la próxima tarea.
-    for (int rank = 1; rank < world_size; ++rank) {
-        // Enviar cadena vacía (longitud 1) como señal de fin
-        MPI_Send("", 1, MPI_CHAR, rank, TAG_NUEVA_TAREA, MPI_COMM_WORLD);
     }
     
     guardarResultadoPlaceholder();
     cout << "[MASTER] Trabajo finalizado.\n";
 }
 
+// -----------------------------------------------------------------------------
 // 2. Ejecuta rol del ESCLAVO (Rank > 0)
+// -----------------------------------------------------------------------------
 void ejecutarEsclavo(int rank) {
-    cout << "[WORKER " << rank << "] Iniciando Worker (MODO LUT).\n";
+    cout << "[WORKER " << rank << "] Iniciando Worker (MODO LOTE).\n";
     MPI_Status status;
     bool continuar = true;
+    int longitud_buffer_max = (BATCH_SIZE * (256 + 1));
 
     while (continuar) {
-        char ruta_buffer[256]; 
-        int longitud_ruta;
+        char buffer_rutas[longitud_buffer_max]; 
+        int longitud_buffer;
 
-        // 1. Recibir Tarea (Ruta de la imagen)
-        MPI_Recv(ruta_buffer, 256, MPI_CHAR, 0, TAG_NUEVA_TAREA, MPI_COMM_WORLD, &status);
+        // 1. Recibir Tarea (Lote de Rutas)
+        MPI_Recv(buffer_rutas, longitud_buffer_max, MPI_CHAR, 0, TAG_NUEVA_TAREA, MPI_COMM_WORLD, &status);
         
-        MPI_Get_count(&status, MPI_CHAR, &longitud_ruta);
+        MPI_Get_count(&status, MPI_CHAR, &longitud_buffer);
 
-        // Si la longitud es 1 (solo el terminador \0), es la señal de fin
-        if (longitud_ruta <= 1) { 
-            cout << "[WORKER " << rank << "] Recibida señal de finalización. Terminando.\n";
+        if (longitud_buffer <= 1) { 
             continuar = false;
             break;
         }
 
-        std::string ruta_imagen(ruta_buffer);
-        cout << "[WORKER " << rank << "] Procesando: " << ruta_imagen << "\n";
-
-        // 2. Cálculo de la LUT (Lógica en preprocesamiento.cpp)
-        // Utiliza OpenMP internamente si está implementado.
-        std::vector<unsigned char> lut = preprocesarImagenYCalcularLUT(ruta_imagen); 
-
-        // 3. Enviar la LUT (datos) al Maestro
-        MPI_Send(lut.data(), LUT_SIZE, MPI_UNSIGNED_CHAR, 0, TAG_LUT, MPI_COMM_WORLD);
+        std::string rutas_str(buffer_rutas);
+        std::vector<std::string> rutas_a_procesar = vectorARutas(rutas_str);
         
-        // 4. Enviar el nombre de la imagen que corresponde a la LUT
-        MPI_Send(ruta_imagen.c_str(), ruta_imagen.length() + 1, MPI_CHAR, 0, TAG_RUTA_COMPLETADA, MPI_COMM_WORLD);
+        cout << "[WORKER " << rank << "] Procesando lote de " << rutas_a_procesar.size() << " imágenes.\n";
+
+        // 2. Cálculo de las LUTs (Lógica en preprocesamiento.cpp)
+        std::vector<unsigned char> lut_data = preprocesarLoteYCalcularLUTs(rutas_a_procesar); 
+
+        // 3. Envío de la LUTs y Rutas al Maestro
         
-        cout << "[WORKER " << rank << "] LUT y ruta enviadas al Maestro. Esperando nueva tarea...\n";
+        // A. Enviar el array contiguo de LUTs
+        MPI_Send(lut_data.data(), lut_data.size(), MPI_UNSIGNED_CHAR, 0, TAG_RESULTADO, MPI_COMM_WORLD);
+        
+        // B. Enviar las rutas de los archivos completados (mantenemos la cadena original para simplificar)
+        MPI_Send(rutas_str.c_str(), rutas_str.length() + 1, MPI_CHAR, 0, TAG_RUTA_COMPLETADA, MPI_COMM_WORLD);
+        
+        cout << "[WORKER " << rank << "] Lote de LUTs y rutas enviado. Esperando nueva tarea...\n";
     }
+    cout << "[WORKER " << rank << "] Finalizando.\n";
 }
