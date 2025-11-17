@@ -53,7 +53,7 @@ void aplicarLUTCUDA(const std::string& ruta, const std::vector<unsigned char>& l
     CUDA_CHECK(cudaMemcpy(d_imagen_in, imagen_h.data, size_imagen, cudaMemcpyHostToDevice));
     CUDA_CHECK(cudaMemcpy(d_lut, lut.data(), size_lut, cudaMemcpyHostToDevice));
 
-    int threadsPerBlock = 256;
+    int threadsPerBlock = 1024;
     int blocksPerGrid = (totalPix + threadsPerBlock - 1) / threadsPerBlock;
 
     aplicarLUTKernel<<<blocksPerGrid, threadsPerBlock>>>(d_imagen_in, d_imagen_out, d_lut, totalPix);
