@@ -1,3 +1,4 @@
+#include "procesamiento_gpu.hpp"
 #include <cuda_runtime.h>
 #include <opencv2/opencv.hpp>
 #include <vector>
@@ -36,6 +37,14 @@ __global__ void aplicarLUTKernel(const unsigned char* d_imagen_in,
     if (i < totalPix) {
         d_imagen_out[i] = d_lut[d_imagen_in[i]];
     }
+}
+
+void aplicarLUTKernel_wrapper(const unsigned char* d_imagen_in, unsigned char* d_imagen_out, const unsigned char* d_lut, int totalPix)
+{
+    int blocksPerGrid = (totalPix + THREADS_PER_BLOCK - 1) / THREADS_PER_BLOCK;
+    aplicarLUTKernel<<<blocksPerGrid, THREADS_PER_BLOCK>>>(d_imagen_in, d_imagen_out, d_lut, totalPix);
+    CUDA_CHECK(cudaGetLastError());
+    CUDA_CHECK(cudaDeviceSynchronize());
 }
 
 // -----------------------------------------------------------------------------

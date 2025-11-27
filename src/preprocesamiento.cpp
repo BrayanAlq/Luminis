@@ -1,7 +1,5 @@
-#include <opencv2/opencv.hpp>
+#include "preprocesamiento.hpp"
 #include <omp.h>
-#include <vector>
-#include <string>
 #include <filesystem>
 #include <iostream>
 #include <algorithm>
@@ -25,12 +23,11 @@ std::vector<std::string> listarImagenesEnCarpeta(const std::string& carpeta) {
 // -----------------------------------------------------------------------------
 // Función de cálculo individual: Calcula Histograma, CDF y LUT (Optimizada con OpenMP)
 // -----------------------------------------------------------------------------
-std::vector<unsigned char> preprocesarImagenYCalcularLUT(const std::string& ruta) {
-    cv::Mat img = cv::imread(ruta, cv::IMREAD_GRAYSCALE);
+std::vector<unsigned char> calcularLUT(const cv::Mat& img) {
     vector<unsigned char> lut(256);
     
     if (img.empty()) {
-        cerr << "[WORKER] Error cargando " << ruta << ". Devolviendo LUT identity.\n";
+        cerr << "[WORKER] Error: Imagen vacía. Devolviendo LUT identity.\n";
         for (int i = 0; i < 256; ++i) lut[i] = (unsigned char)i; 
         return lut;
     }
@@ -95,6 +92,17 @@ std::vector<unsigned char> preprocesarImagenYCalcularLUT(const std::string& ruta
     }
     
     return lut;
+}
+
+std::vector<unsigned char> preprocesarImagenYCalcularLUT(const std::string& ruta) {
+    cv::Mat img = cv::imread(ruta, cv::IMREAD_GRAYSCALE);
+    if (img.empty()) {
+        cerr << "[WORKER] Error cargando " << ruta << ". Devolviendo LUT identity.\n";
+        vector<unsigned char> lut(256);
+        for (int i = 0; i < 256; ++i) lut[i] = (unsigned char)i; 
+        return lut;
+    }
+    return calcularLUT(img);
 }
 
 // -----------------------------------------------------------------------------
