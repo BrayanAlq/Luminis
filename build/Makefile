@@ -129,6 +129,19 @@ LuminisApp/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LuminisApp.dir/build.make CMakeFiles/LuminisApp.dir/build
 .PHONY : LuminisApp/fast
 
+#=============================================================================
+# Target rules for targets named run_tests
+
+# Build rule for target.
+run_tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run_tests
+.PHONY : run_tests
+
+# fast build rule for target.
+run_tests/fast:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/run_tests.dir/build.make test/CMakeFiles/run_tests.dir/build
+.PHONY : run_tests/fast
+
 comunicacion_sync.o: comunicacion_sync.cpp.o
 .PHONY : comunicacion_sync.o
 
@@ -426,6 +439,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... LuminisApp"
+	@echo "... run_tests"
 	@echo "... comunicacion_sync.o"
 	@echo "... comunicacion_sync.i"
 	@echo "... comunicacion_sync.s"

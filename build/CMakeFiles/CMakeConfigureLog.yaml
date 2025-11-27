@@ -1286,3 +1286,246 @@ events:
         
       exitCode: 0
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:43 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode normal"
+    directories:
+      source: "/home/david/Luminis/build/CMakeFiles/CMakeScratch/TryCompile-0Iou5w"
+      binary: "/home/david/Luminis/build/CMakeFiles/CMakeScratch/TryCompile-0Iou5w"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/david/Luminis/build/CMakeFiles/CMakeScratch/TryCompile-0Iou5w'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_5ec40/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_5ec40.dir/build.make CMakeFiles/cmTC_5ec40.dir/build
+        gmake[1]: se entra en el directorio '/home/david/Luminis/build/CMakeFiles/CMakeScratch/TryCompile-0Iou5w'
+        Building CXX object CMakeFiles/cmTC_5ec40.dir/test_mpi.cpp.o
+        /usr/bin/c++  -isystem /opt/openmpi-5.0.8/include -std=gnu++17 -o CMakeFiles/cmTC_5ec40.dir/test_mpi.cpp.o -c /home/david/Luminis/build/CMakeFiles/CMakeScratch/TryCompile-0Iou5w/test_mpi.cpp
+        Linking CXX executable cmTC_5ec40
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5ec40.dir/link.txt --verbose=1
+        /usr/bin/c++ -Wl,-rpath -Wl,/opt/openmpi-5.0.8/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_5ec40.dir/test_mpi.cpp.o -o cmTC_5ec40  -Wl,-rpath,/opt/openmpi-5.0.8/lib /opt/openmpi-5.0.8/lib/libmpi.so 
+        gmake[1]: se sale del directorio '/home/david/Luminis/build/CMakeFiles/CMakeScratch/TryCompile-0Iou5w'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1672 (_MPI_try_staged_settings)"
+      - "CMakeLists.txt:43 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "/home/david/Luminis/build/CMakeFiles/CMakeScratch/TryCompile-hwJdSM"
+      binary: "/home/david/Luminis/build/CMakeFiles/CMakeScratch/TryCompile-hwJdSM"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: '/home/david/Luminis/build/CMakeFiles/CMakeScratch/TryCompile-hwJdSM'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_ef4b1/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_ef4b1.dir/build.make CMakeFiles/cmTC_ef4b1.dir/build
+        gmake[1]: se entra en el directorio '/home/david/Luminis/build/CMakeFiles/CMakeScratch/TryCompile-hwJdSM'
+        Building CXX object CMakeFiles/cmTC_ef4b1.dir/test_mpi.cpp.o
+        /usr/bin/c++  -isystem /opt/openmpi-5.0.8/include -std=gnu++17 -o CMakeFiles/cmTC_ef4b1.dir/test_mpi.cpp.o -c /home/david/Luminis/build/CMakeFiles/CMakeScratch/TryCompile-hwJdSM/test_mpi.cpp
+        Linking CXX executable cmTC_ef4b1
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ef4b1.dir/link.txt --verbose=1
+        /usr/bin/c++ -Wl,-rpath -Wl,/opt/openmpi-5.0.8/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_ef4b1.dir/test_mpi.cpp.o -o cmTC_ef4b1  -Wl,-rpath,/opt/openmpi-5.0.8/lib /opt/openmpi-5.0.8/lib/libmpi.so 
+        gmake[1]: se sale del directorio '/home/david/Luminis/build/CMakeFiles/CMakeScratch/TryCompile-hwJdSM'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/FindThreads.cmake:99 (CHECK_CXX_SOURCE_COMPILES)"
+      - "/usr/share/cmake-3.28/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "/usr/share/cmake-3.28/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/GTest/GTestConfig.cmake:39 (find_dependency)"
+      - "/usr/share/cmake-3.28/Modules/FindGTest.cmake:194 (find_package)"
+      - "test/CMakeLists.txt:9 (find_package)"
+    directories:
+      source: "/home/david/Luminis/build/CMakeFiles/CMakeScratch/TryCompile-AYbpiX"
+      binary: "/home/david/Luminis/build/CMakeFiles/CMakeScratch/TryCompile-AYbpiX"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: '/home/david/Luminis/build/CMakeFiles/CMakeScratch/TryCompile-AYbpiX'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_92332/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_92332.dir/build.make CMakeFiles/cmTC_92332.dir/build
+        gmake[1]: se entra en el directorio '/home/david/Luminis/build/CMakeFiles/CMakeScratch/TryCompile-AYbpiX'
+        Building CXX object CMakeFiles/cmTC_92332.dir/src.cxx.o
+        /usr/bin/c++ -DCMAKE_HAVE_LIBC_PTHREAD  -std=gnu++17 -o CMakeFiles/cmTC_92332.dir/src.cxx.o -c /home/david/Luminis/build/CMakeFiles/CMakeScratch/TryCompile-AYbpiX/src.cxx
+        Linking CXX executable cmTC_92332
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_92332.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_92332.dir/src.cxx.o -o cmTC_92332 
+        gmake[1]: se sale del directorio '/home/david/Luminis/build/CMakeFiles/CMakeScratch/TryCompile-AYbpiX'
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:43 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode normal"
+    directories:
+      source: "/home/david/Luminis/build/CMakeFiles/CMakeScratch/TryCompile-sS7U9F"
+      binary: "/home/david/Luminis/build/CMakeFiles/CMakeScratch/TryCompile-sS7U9F"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/david/Luminis/build/CMakeFiles/CMakeScratch/TryCompile-sS7U9F'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_f6402/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_f6402.dir/build.make CMakeFiles/cmTC_f6402.dir/build
+        gmake[1]: se entra en el directorio '/home/david/Luminis/build/CMakeFiles/CMakeScratch/TryCompile-sS7U9F'
+        Building CXX object CMakeFiles/cmTC_f6402.dir/test_mpi.cpp.o
+        /usr/bin/c++  -isystem /opt/openmpi-5.0.8/include -std=gnu++17 -o CMakeFiles/cmTC_f6402.dir/test_mpi.cpp.o -c /home/david/Luminis/build/CMakeFiles/CMakeScratch/TryCompile-sS7U9F/test_mpi.cpp
+        Linking CXX executable cmTC_f6402
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f6402.dir/link.txt --verbose=1
+        /usr/bin/c++ -Wl,-rpath -Wl,/opt/openmpi-5.0.8/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_f6402.dir/test_mpi.cpp.o -o cmTC_f6402  -Wl,-rpath,/opt/openmpi-5.0.8/lib /opt/openmpi-5.0.8/lib/libmpi.so 
+        gmake[1]: se sale del directorio '/home/david/Luminis/build/CMakeFiles/CMakeScratch/TryCompile-sS7U9F'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1672 (_MPI_try_staged_settings)"
+      - "CMakeLists.txt:43 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "/home/david/Luminis/build/CMakeFiles/CMakeScratch/TryCompile-7d5d9R"
+      binary: "/home/david/Luminis/build/CMakeFiles/CMakeScratch/TryCompile-7d5d9R"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: '/home/david/Luminis/build/CMakeFiles/CMakeScratch/TryCompile-7d5d9R'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_29b8c/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_29b8c.dir/build.make CMakeFiles/cmTC_29b8c.dir/build
+        gmake[1]: se entra en el directorio '/home/david/Luminis/build/CMakeFiles/CMakeScratch/TryCompile-7d5d9R'
+        Building CXX object CMakeFiles/cmTC_29b8c.dir/test_mpi.cpp.o
+        /usr/bin/c++  -isystem /opt/openmpi-5.0.8/include -std=gnu++17 -o CMakeFiles/cmTC_29b8c.dir/test_mpi.cpp.o -c /home/david/Luminis/build/CMakeFiles/CMakeScratch/TryCompile-7d5d9R/test_mpi.cpp
+        Linking CXX executable cmTC_29b8c
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_29b8c.dir/link.txt --verbose=1
+        /usr/bin/c++ -Wl,-rpath -Wl,/opt/openmpi-5.0.8/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_29b8c.dir/test_mpi.cpp.o -o cmTC_29b8c  -Wl,-rpath,/opt/openmpi-5.0.8/lib /opt/openmpi-5.0.8/lib/libmpi.so 
+        gmake[1]: se sale del directorio '/home/david/Luminis/build/CMakeFiles/CMakeScratch/TryCompile-7d5d9R'
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:43 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode normal"
+    directories:
+      source: "/home/david/Luminis/build/CMakeFiles/CMakeScratch/TryCompile-rIvx8N"
+      binary: "/home/david/Luminis/build/CMakeFiles/CMakeScratch/TryCompile-rIvx8N"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/david/Luminis/build/CMakeFiles/CMakeScratch/TryCompile-rIvx8N'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_01ffb/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_01ffb.dir/build.make CMakeFiles/cmTC_01ffb.dir/build
+        gmake[1]: se entra en el directorio '/home/david/Luminis/build/CMakeFiles/CMakeScratch/TryCompile-rIvx8N'
+        Building CXX object CMakeFiles/cmTC_01ffb.dir/test_mpi.cpp.o
+        /usr/bin/c++  -isystem /opt/openmpi-5.0.8/include -std=gnu++17 -o CMakeFiles/cmTC_01ffb.dir/test_mpi.cpp.o -c /home/david/Luminis/build/CMakeFiles/CMakeScratch/TryCompile-rIvx8N/test_mpi.cpp
+        Linking CXX executable cmTC_01ffb
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_01ffb.dir/link.txt --verbose=1
+        /usr/bin/c++ -Wl,-rpath -Wl,/opt/openmpi-5.0.8/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_01ffb.dir/test_mpi.cpp.o -o cmTC_01ffb  -Wl,-rpath,/opt/openmpi-5.0.8/lib /opt/openmpi-5.0.8/lib/libmpi.so 
+        gmake[1]: se sale del directorio '/home/david/Luminis/build/CMakeFiles/CMakeScratch/TryCompile-rIvx8N'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1672 (_MPI_try_staged_settings)"
+      - "CMakeLists.txt:43 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "/home/david/Luminis/build/CMakeFiles/CMakeScratch/TryCompile-HbtYoD"
+      binary: "/home/david/Luminis/build/CMakeFiles/CMakeScratch/TryCompile-HbtYoD"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: '/home/david/Luminis/build/CMakeFiles/CMakeScratch/TryCompile-HbtYoD'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_3f5df/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_3f5df.dir/build.make CMakeFiles/cmTC_3f5df.dir/build
+        gmake[1]: se entra en el directorio '/home/david/Luminis/build/CMakeFiles/CMakeScratch/TryCompile-HbtYoD'
+        Building CXX object CMakeFiles/cmTC_3f5df.dir/test_mpi.cpp.o
+        /usr/bin/c++  -isystem /opt/openmpi-5.0.8/include -std=gnu++17 -o CMakeFiles/cmTC_3f5df.dir/test_mpi.cpp.o -c /home/david/Luminis/build/CMakeFiles/CMakeScratch/TryCompile-HbtYoD/test_mpi.cpp
+        Linking CXX executable cmTC_3f5df
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3f5df.dir/link.txt --verbose=1
+        /usr/bin/c++ -Wl,-rpath -Wl,/opt/openmpi-5.0.8/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_3f5df.dir/test_mpi.cpp.o -o cmTC_3f5df  -Wl,-rpath,/opt/openmpi-5.0.8/lib /opt/openmpi-5.0.8/lib/libmpi.so 
+        gmake[1]: se sale del directorio '/home/david/Luminis/build/CMakeFiles/CMakeScratch/TryCompile-HbtYoD'
+        
+      exitCode: 0
+...

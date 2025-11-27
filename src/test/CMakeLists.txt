@@ -22,7 +22,9 @@ add_executable(run_tests
 # Set CUDA properties
 set_target_properties(run_tests PROPERTIES
     CUDA_SEPARABLE_COMPILATION ON
-    CUDA_STANDARD 14
+CUDA_STANDARD 17   # <--- CAMBIAR ESTO DE 14 A 17
+    CXX_STANDARD 17    # <--- AGREGAR ESTO PARA ASEGURAR CONSISTENCIA
+
 )
 
 # Link GTest
