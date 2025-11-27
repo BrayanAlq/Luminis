@@ -63,7 +63,7 @@ struct GpuTask {
 };
 
 
-extern "C" void aplicarLUTCUDA_Lote(const std::vector<std::string>& rutas, const std::vector<unsigned char>& lut_data) {
+void aplicarLUTCUDA_Lote(const std::vector<std::string>& rutas, const std::vector<unsigned char>& lut_data) {
     size_t num_imagenes = rutas.size();
     if (num_imagenes == 0) return;
 

@@ -7,7 +7,7 @@ CUDA_DEFINES =
 
 CUDA_INCLUDES = --options-file CMakeFiles/LuminisApp.dir/includes_CUDA.rsp
 
-CUDA_FLAGS = -std=c++14 "--generate-code=arch=compute_52,code=[compute_52,sm_52]"
+CUDA_FLAGS =  --expt-relaxed-constexpr -std=c++17 "--generate-code=arch=compute_52,code=[compute_52,sm_52]"
 
 CXX_DEFINES = 
 

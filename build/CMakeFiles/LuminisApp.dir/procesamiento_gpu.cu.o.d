@@ -38,6 +38,7 @@ CMakeFiles/LuminisApp.dir/procesamiento_gpu.cu.o : /home/david/Luminis/src/proce
     /usr/include/x86_64-linux-gnu/c++/12/bits/c++config.h \
     /usr/include/x86_64-linux-gnu/c++/12/bits/os_defines.h \
     /usr/include/x86_64-linux-gnu/c++/12/bits/cpu_defines.h \
+    /usr/include/c++/12/pstl/pstl_config.h \
     /usr/include/stdlib.h \
     /usr/include/x86_64-linux-gnu/bits/waitflags.h \
     /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
@@ -113,6 +114,36 @@ CMakeFiles/LuminisApp.dir/procesamiento_gpu.cu.o : /home/david/Luminis/src/proce
     /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
     /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
     /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+    /usr/include/c++/12/bits/specfun.h \
+    /usr/include/c++/12/bits/stl_algobase.h \
+    /usr/include/c++/12/bits/functexcept.h \
+    /usr/include/c++/12/bits/exception_defines.h \
+    /usr/include/c++/12/ext/numeric_traits.h \
+    /usr/include/c++/12/bits/stl_pair.h \
+    /usr/include/c++/12/type_traits \
+    /usr/include/c++/12/bits/move.h \
+    /usr/include/c++/12/bits/utility.h \
+    /usr/include/c++/12/bits/stl_iterator_base_types.h \
+    /usr/include/c++/12/bits/stl_iterator_base_funcs.h \
+    /usr/include/c++/12/bits/concept_check.h \
+    /usr/include/c++/12/debug/assertions.h \
+    /usr/include/c++/12/bits/stl_iterator.h \
+    /usr/include/c++/12/bits/ptr_traits.h \
+    /usr/include/c++/12/debug/debug.h \
+    /usr/include/c++/12/bits/predefined_ops.h \
+    /usr/include/c++/12/limits \
+    /usr/include/c++/12/tr1/gamma.tcc \
+    /usr/include/c++/12/tr1/special_function_util.h \
+    /usr/include/c++/12/tr1/bessel_function.tcc \
+    /usr/include/c++/12/tr1/beta_function.tcc \
+    /usr/include/c++/12/tr1/ell_integral.tcc \
+    /usr/include/c++/12/tr1/exp_integral.tcc \
+    /usr/include/c++/12/tr1/hypergeometric.tcc \
+    /usr/include/c++/12/tr1/legendre_function.tcc \
+    /usr/include/c++/12/tr1/modified_bessel_func.tcc \
+    /usr/include/c++/12/tr1/poly_hermite.tcc \
+    /usr/include/c++/12/tr1/poly_laguerre.tcc \
+    /usr/include/c++/12/tr1/riemann_zeta.tcc \
     /usr/include/crt/math_functions.hpp \
     /usr/include/crt/device_functions.h \
     /usr/include/crt/device_functions.hpp \
@@ -148,17 +179,12 @@ CMakeFiles/LuminisApp.dir/procesamiento_gpu.cu.o : /home/david/Luminis/src/proce
     /usr/include/device_launch_parameters.h \
     /usr/include/c++/12/utility \
     /usr/include/c++/12/bits/stl_relops.h \
-    /usr/include/c++/12/bits/stl_pair.h \
-    /usr/include/c++/12/type_traits \
-    /usr/include/c++/12/bits/move.h \
-    /usr/include/c++/12/bits/utility.h \
     /usr/include/c++/12/initializer_list \
     /usr/include/opencv4/opencv2/opencv.hpp \
     /usr/include/opencv4/opencv2/opencv_modules.hpp \
     /usr/include/opencv4/opencv2/core.hpp \
     /usr/include/opencv4/opencv2/core/cvdef.h \
     /usr/include/opencv4/opencv2/core/version.hpp \
-    /usr/include/c++/12/limits \
     /usr/include/opencv4/opencv2/core/hal/interface.h \
     /usr/include/c++/12/cstddef \
     /usr/include/c++/12/cstdint \
@@ -170,18 +196,6 @@ CMakeFiles/LuminisApp.dir/procesamiento_gpu.cu.o : /home/david/Luminis/src/proce
     /usr/include/opencv4/opencv2/core/cv_cpu_dispatch.h \
     /usr/include/c++/12/array \
     /usr/include/c++/12/compare \
-    /usr/include/c++/12/bits/functexcept.h \
-    /usr/include/c++/12/bits/exception_defines.h \
-    /usr/include/c++/12/bits/stl_algobase.h \
-    /usr/include/c++/12/ext/numeric_traits.h \
-    /usr/include/c++/12/bits/stl_iterator_base_types.h \
-    /usr/include/c++/12/bits/stl_iterator_base_funcs.h \
-    /usr/include/c++/12/bits/concept_check.h \
-    /usr/include/c++/12/debug/assertions.h \
-    /usr/include/c++/12/bits/stl_iterator.h \
-    /usr/include/c++/12/bits/ptr_traits.h \
-    /usr/include/c++/12/debug/debug.h \
-    /usr/include/c++/12/bits/predefined_ops.h \
     /usr/include/c++/12/bits/range_access.h \
     /usr/include/opencv4/opencv2/core/base.hpp \
     /usr/include/c++/12/climits \
@@ -192,6 +206,8 @@ CMakeFiles/LuminisApp.dir/procesamiento_gpu.cu.o : /home/david/Luminis/src/proce
     /usr/include/c++/12/bits/stl_tempbuf.h \
     /usr/include/c++/12/bits/stl_construct.h \
     /usr/include/c++/12/bits/uniform_int_dist.h \
+    /usr/include/c++/12/pstl/glue_algorithm_defs.h \
+    /usr/include/c++/12/pstl/execution_defs.h \
     /usr/include/opencv4/opencv2/core/cvstd.hpp \
     /usr/include/c++/12/cstring \
     /usr/include/c++/12/cctype \
@@ -223,6 +239,10 @@ CMakeFiles/LuminisApp.dir/procesamiento_gpu.cu.o : /home/david/Luminis/src/proce
     /usr/include/c++/12/bits/basic_string.h \
     /usr/include/c++/12/ext/alloc_traits.h \
     /usr/include/c++/12/bits/alloc_traits.h \
+    /usr/include/c++/12/string_view \
+    /usr/include/c++/12/bits/functional_hash.h \
+    /usr/include/c++/12/bits/hash_bytes.h \
+    /usr/include/c++/12/bits/string_view.tcc \
     /usr/include/c++/12/ext/string_conversions.h \
     /usr/include/c++/12/cstdio \
     /usr/include/c++/12/cerrno \
@@ -234,8 +254,6 @@ CMakeFiles/LuminisApp.dir/procesamiento_gpu.cu.o : /home/david/Luminis/src/proce
     /usr/include/asm-generic/errno-base.h \
     /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
     /usr/include/c++/12/bits/charconv.h \
-    /usr/include/c++/12/bits/functional_hash.h \
-    /usr/include/c++/12/bits/hash_bytes.h \
     /usr/include/c++/12/bits/basic_string.tcc \
     /usr/include/opencv4/opencv2/core/cvstd_wrapper.hpp \
     /usr/include/c++/12/memory \
@@ -272,6 +290,7 @@ CMakeFiles/LuminisApp.dir/procesamiento_gpu.cu.o : /home/david/Luminis/src/proce
     /usr/include/c++/12/bits/atomic_base.h \
     /usr/include/c++/12/bits/atomic_lockfree_defines.h \
     /usr/include/c++/12/backward/auto_ptr.h \
+    /usr/include/c++/12/pstl/glue_memory_defs.h \
     /usr/include/opencv4/opencv2/core/neon_utils.hpp \
     /usr/include/opencv4/opencv2/core/vsx_utils.hpp \
     /usr/include/opencv4/opencv2/core/check.hpp \
@@ -321,6 +340,13 @@ CMakeFiles/LuminisApp.dir/procesamiento_gpu.cu.o : /home/david/Luminis/src/proce
     /usr/include/opencv4/opencv2/core/utility.hpp \
     /usr/include/c++/12/functional \
     /usr/include/c++/12/bits/std_function.h \
+    /usr/include/c++/12/unordered_map \
+    /usr/include/c++/12/bits/hashtable.h \
+    /usr/include/c++/12/bits/hashtable_policy.h \
+    /usr/include/c++/12/bits/enable_special_members.h \
+    /usr/include/c++/12/bits/node_handle.h \
+    /usr/include/c++/12/bits/unordered_map.h \
+    /usr/include/c++/12/bits/erase_if.h \
     /usr/include/c++/12/mutex \
     /usr/include/c++/12/bits/chrono.h \
     /usr/include/c++/12/ratio \
@@ -346,7 +372,6 @@ CMakeFiles/LuminisApp.dir/procesamiento_gpu.cu.o : /home/david/Luminis/src/proce
     /usr/include/c++/12/bits/stl_tree.h \
     /usr/include/c++/12/bits/stl_map.h \
     /usr/include/c++/12/bits/stl_multimap.h \
-    /usr/include/c++/12/bits/erase_if.h \
     /usr/include/opencv4/opencv2/dnn/layer.hpp \
     /usr/include/opencv4/opencv2/dnn/dnn.inl.hpp \
     /usr/include/opencv4/opencv2/dnn/utils/inference_engine.hpp \
@@ -368,11 +393,6 @@ CMakeFiles/LuminisApp.dir/procesamiento_gpu.cu.o : /home/david/Luminis/src/proce
     /usr/include/opencv4/opencv2/flann/dynamic_bitset.h \
     /usr/include/opencv4/opencv2/flann/dist.h \
     /usr/include/opencv4/opencv2/flann/heap.h \
-    /usr/include/c++/12/unordered_map \
-    /usr/include/c++/12/bits/hashtable.h \
-    /usr/include/c++/12/bits/hashtable_policy.h \
-    /usr/include/c++/12/bits/enable_special_members.h \
-    /usr/include/c++/12/bits/unordered_map.h \
     /usr/include/opencv4/opencv2/flann/allocator.h \
     /usr/include/opencv4/opencv2/flann/random.h \
     /usr/include/opencv4/opencv2/flann/kdtree_single_index.h \
@@ -435,4 +455,9 @@ CMakeFiles/LuminisApp.dir/procesamiento_gpu.cu.o : /home/david/Luminis/src/proce
     /usr/include/opencv4/opencv2/video.hpp \
     /usr/include/opencv4/opencv2/video/tracking.hpp \
     /usr/include/opencv4/opencv2/video/background_segm.hpp \
-    /home/david/Luminis/src/filesystem_utils.hpp
+    /usr/include/c++/12/filesystem \
+    /usr/include/c++/12/bits/fs_fwd.h \
+    /usr/include/c++/12/bits/fs_path.h \
+    /usr/include/c++/12/codecvt \
+    /usr/include/c++/12/bits/fs_dir.h \
+    /usr/include/c++/12/bits/fs_ops.h

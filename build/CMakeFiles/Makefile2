@@ -81,12 +81,12 @@ clean: CMakeFiles/LuminisApp.dir/clean
 CMakeFiles/LuminisApp.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LuminisApp.dir/build.make CMakeFiles/LuminisApp.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LuminisApp.dir/build.make CMakeFiles/LuminisApp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/david/Luminis/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14 "Built target LuminisApp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/david/Luminis/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13 "Built target LuminisApp"
 .PHONY : CMakeFiles/LuminisApp.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/LuminisApp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/david/Luminis/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/david/Luminis/build/CMakeFiles 13
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/LuminisApp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/david/Luminis/build/CMakeFiles 0
 .PHONY : CMakeFiles/LuminisApp.dir/rule

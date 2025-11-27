@@ -214,7 +214,7 @@ CMakeFiles/LuminisApp.dir/modo_openmp_cuda.cu.o: CMakeFiles/LuminisApp.dir/inclu
 CMakeFiles/LuminisApp.dir/modo_openmp_cuda.cu.o: /home/david/Luminis/src/modo_openmp_cuda.cu
 CMakeFiles/LuminisApp.dir/modo_openmp_cuda.cu.o: CMakeFiles/LuminisApp.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/david/Luminis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CUDA object CMakeFiles/LuminisApp.dir/modo_openmp_cuda.cu.o"
-	/usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT CMakeFiles/LuminisApp.dir/modo_openmp_cuda.cu.o -MF CMakeFiles/LuminisApp.dir/modo_openmp_cuda.cu.o.d -x cu -rdc=true -c /home/david/Luminis/src/modo_openmp_cuda.cu -o CMakeFiles/LuminisApp.dir/modo_openmp_cuda.cu.o
+	/usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT CMakeFiles/LuminisApp.dir/modo_openmp_cuda.cu.o -MF CMakeFiles/LuminisApp.dir/modo_openmp_cuda.cu.o.d -x cu -c /home/david/Luminis/src/modo_openmp_cuda.cu -o CMakeFiles/LuminisApp.dir/modo_openmp_cuda.cu.o
 
 CMakeFiles/LuminisApp.dir/modo_openmp_cuda.cu.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CUDA source to CMakeFiles/LuminisApp.dir/modo_openmp_cuda.cu.i"
@@ -229,7 +229,7 @@ CMakeFiles/LuminisApp.dir/procesamiento_gpu.cu.o: CMakeFiles/LuminisApp.dir/incl
 CMakeFiles/LuminisApp.dir/procesamiento_gpu.cu.o: /home/david/Luminis/src/procesamiento_gpu.cu
 CMakeFiles/LuminisApp.dir/procesamiento_gpu.cu.o: CMakeFiles/LuminisApp.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/david/Luminis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CUDA object CMakeFiles/LuminisApp.dir/procesamiento_gpu.cu.o"
-	/usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT CMakeFiles/LuminisApp.dir/procesamiento_gpu.cu.o -MF CMakeFiles/LuminisApp.dir/procesamiento_gpu.cu.o.d -x cu -rdc=true -c /home/david/Luminis/src/procesamiento_gpu.cu -o CMakeFiles/LuminisApp.dir/procesamiento_gpu.cu.o
+	/usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT CMakeFiles/LuminisApp.dir/procesamiento_gpu.cu.o -MF CMakeFiles/LuminisApp.dir/procesamiento_gpu.cu.o.d -x cu -c /home/david/Luminis/src/procesamiento_gpu.cu -o CMakeFiles/LuminisApp.dir/procesamiento_gpu.cu.o
 
 CMakeFiles/LuminisApp.dir/procesamiento_gpu.cu.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CUDA source to CMakeFiles/LuminisApp.dir/procesamiento_gpu.cu.i"
@@ -238,105 +238,6 @@ CMakeFiles/LuminisApp.dir/procesamiento_gpu.cu.i: cmake_force
 CMakeFiles/LuminisApp.dir/procesamiento_gpu.cu.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CUDA source to assembly CMakeFiles/LuminisApp.dir/procesamiento_gpu.cu.s"
 	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_ASSEMBLY_SOURCE
-
-# Object files for target LuminisApp
-LuminisApp_OBJECTS = \
-"CMakeFiles/LuminisApp.dir/comunicacion_sync.cpp.o" \
-"CMakeFiles/LuminisApp.dir/control_global.cpp.o" \
-"CMakeFiles/LuminisApp.dir/gestor_distribucion.cpp.o" \
-"CMakeFiles/LuminisApp.dir/main.cpp.o" \
-"CMakeFiles/LuminisApp.dir/postprocesamiento.cpp.o" \
-"CMakeFiles/LuminisApp.dir/preprocesamiento.cpp.o" \
-"CMakeFiles/LuminisApp.dir/modo_serial.cpp.o" \
-"CMakeFiles/LuminisApp.dir/modo_mpi_openmp_cuda.cpp.o" \
-"CMakeFiles/LuminisApp.dir/filesystem_utils.cpp.o" \
-"CMakeFiles/LuminisApp.dir/placeholder.cpp.o" \
-"CMakeFiles/LuminisApp.dir/modo_openmp_cuda.cu.o" \
-"CMakeFiles/LuminisApp.dir/procesamiento_gpu.cu.o"
-
-# External object files for target LuminisApp
-LuminisApp_EXTERNAL_OBJECTS =
-
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: CMakeFiles/LuminisApp.dir/comunicacion_sync.cpp.o
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: CMakeFiles/LuminisApp.dir/control_global.cpp.o
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: CMakeFiles/LuminisApp.dir/gestor_distribucion.cpp.o
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: CMakeFiles/LuminisApp.dir/main.cpp.o
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: CMakeFiles/LuminisApp.dir/postprocesamiento.cpp.o
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: CMakeFiles/LuminisApp.dir/preprocesamiento.cpp.o
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: CMakeFiles/LuminisApp.dir/modo_serial.cpp.o
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: CMakeFiles/LuminisApp.dir/modo_mpi_openmp_cuda.cpp.o
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: CMakeFiles/LuminisApp.dir/filesystem_utils.cpp.o
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: CMakeFiles/LuminisApp.dir/placeholder.cpp.o
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: CMakeFiles/LuminisApp.dir/modo_openmp_cuda.cu.o
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: CMakeFiles/LuminisApp.dir/procesamiento_gpu.cu.o
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: CMakeFiles/LuminisApp.dir/build.make
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /opt/openmpi-5.0.8/lib/libmpi.so
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_stitching.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_alphamat.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_aruco.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_barcode.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_bgsegm.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_bioinspired.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_ccalib.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_cvv.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_dnn_objdetect.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_dnn_superres.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_dpm.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_face.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_freetype.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_fuzzy.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_hdf.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_hfs.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_img_hash.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_intensity_transform.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_line_descriptor.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_mcc.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_quality.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_rapid.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_reg.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_rgbd.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_saliency.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_shape.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_stereo.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_structured_light.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_superres.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_surface_matching.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_tracking.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_videostab.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_viz.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_wechat_qrcode.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_xobjdetect.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_xphoto.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/gcc/x86_64-linux-gnu/13/libgomp.so
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libpthread.a
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_highgui.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_datasets.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_plot.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_text.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_ml.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_phase_unwrapping.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_optflow.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_ximgproc.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_video.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_videoio.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_objdetect.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_calib3d.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_dnn.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_features2d.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_flann.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_photo.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libopencv_core.so.4.6.0
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: CMakeFiles/LuminisApp.dir/deviceLinkLibs.rsp
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: CMakeFiles/LuminisApp.dir/deviceObjects1.rsp
-CMakeFiles/LuminisApp.dir/cmake_device_link.o: CMakeFiles/LuminisApp.dir/dlink.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/david/Luminis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CUDA device code CMakeFiles/LuminisApp.dir/cmake_device_link.o"
-	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/LuminisApp.dir/dlink.txt --verbose=$(VERBOSE)
-
-# Rule to build all files generated by this target.
-CMakeFiles/LuminisApp.dir/build: CMakeFiles/LuminisApp.dir/cmake_device_link.o
-.PHONY : CMakeFiles/LuminisApp.dir/build
 
 # Object files for target LuminisApp
 LuminisApp_OBJECTS = \
@@ -427,9 +328,8 @@ LuminisApp: /usr/lib/x86_64-linux-gnu/libopencv_flann.so.4.6.0
 LuminisApp: /usr/lib/x86_64-linux-gnu/libopencv_photo.so.4.6.0
 LuminisApp: /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.4.6.0
 LuminisApp: /usr/lib/x86_64-linux-gnu/libopencv_core.so.4.6.0
-LuminisApp: CMakeFiles/LuminisApp.dir/cmake_device_link.o
 LuminisApp: CMakeFiles/LuminisApp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/david/Luminis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable LuminisApp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/david/Luminis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable LuminisApp"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/LuminisApp.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

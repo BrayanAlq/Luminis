@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/LuminisApp.dir/cmake_device_link.o"
   "CMakeFiles/LuminisApp.dir/comunicacion_sync.cpp.o"
   "CMakeFiles/LuminisApp.dir/comunicacion_sync.cpp.o.d"
   "CMakeFiles/LuminisApp.dir/control_global.cpp.o"
