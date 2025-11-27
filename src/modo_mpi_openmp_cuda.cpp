@@ -1,12 +1,7 @@
 #include <mpi.h>
 #include <iostream>
-
-// prototipos de funciones definidas en otros .cpp/.cu
-void inicializarControl();
-void finalizarControl();
-
-void ejecutarMaestro(int world_size);
-void ejecutarEsclavo(int rank);
+#include "control_global.hpp"
+#include "gestor_distribucion.hpp"
 
 int modo_mpi_openmp_cuda(int argc, char** argv) {
     MPI_Init(&argc, &argv);

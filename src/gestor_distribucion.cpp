@@ -1,9 +1,12 @@
+#include "gestor_distribucion.hpp"
 #include <mpi.h>
 #include <iostream>
 #include <vector>
 #include <string>
 #include <algorithm>
 #include <sstream>
+#include "preprocesamiento.hpp"
+#include "procesamiento_gpu.hpp"
 
 using namespace std;
 
@@ -13,10 +16,6 @@ const int TAG_RESULTADO = 20; // Para el envío del array contiguo de LUTs
 const int LUT_SIZE = 256;     // Tamaño de cada LUT (unsigned char)
 
 // --- PROTOTIPOS DE FUNCIONES EXTERNAS ---
-std::vector<std::string> listarImagenesEnCarpeta(const std::string& carpeta);
-std::vector<unsigned char> preprocesarLoteYCalcularLUTs(const std::vector<std::string>& rutas); 
-// Usaremos la versión Lote/Asíncrona del Maestro
-void aplicarLUTCUDA_Lote(const std::vector<std::string>& rutas, const std::vector<unsigned char>& lut_data); 
 void guardarResultadoPlaceholder(); 
 
 // -----------------------------------------------------------------------------
