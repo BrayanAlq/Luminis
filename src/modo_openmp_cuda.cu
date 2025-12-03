@@ -110,6 +110,7 @@ int ejecutarModoOpenMPCUDA()
             continue;
         }
 
+        #pragma omp critical
         cout << "Procesando en hilo " << omp_get_thread_num() << ": " << nombreArchivo << endl;
         cv::Mat resultado = ecualizarHistogramaCUDA(imagen);
 
@@ -117,6 +118,7 @@ int ejecutarModoOpenMPCUDA()
         cv::imwrite(rutaSalidaFinal, resultado);
     }
 
+    #pragma omp single
     cout << "Proceso híbrido (OpenMP+CUDA) completado." << endl;
     return 0;
 }
