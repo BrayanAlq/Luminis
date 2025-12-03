@@ -90,9 +90,19 @@ if(MPI_FOUND)
 endif()
 
 # 🔍 OpenMP
-find_package(OpenMP)
+find_package(OpenMP REQUIRED) # Pon REQUIRED para asegurar que lo encuentra
 if(OpenMP_CXX_FOUND)
     target_link_libraries(${PROJECT_NAME} PRIVATE OpenMP::OpenMP_CXX)
+    
+    # --- AGREGA ESTE BLOQUE ---
+    # Esto fuerza a que la bandera -fopenmp llegue al compilador
+    target_compile_options(${PROJECT_NAME} PRIVATE
+        # Para archivos C++ (.cpp)
+        $<$<COMPILE_LANGUAGE:CXX>:${OpenMP_CXX_FLAGS}>
+        # Para archivos CUDA (.cu) -> Le decimos a nvcc que pase la bandera al host compiler
+        $<$<COMPILE_LANGUAGE:CUDA>:-Xcompiler=-fopenmp>
+    )
+    # --------------------------
 endif()
 
 # 🔍 OpenCV
