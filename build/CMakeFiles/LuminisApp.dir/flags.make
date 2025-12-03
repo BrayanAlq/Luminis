@@ -3,15 +3,15 @@
 
 # compile CUDA with /usr/bin/nvcc
 # compile CXX with /usr/bin/c++
-CUDA_DEFINES = 
+CUDA_DEFINES = -DENABLE_ASYNC_IO_OPT -DENABLE_CUDA_MEMORY_POOL_OPT -DENABLE_OPENMP_REDUCTION_OPT -DENABLE_OVERLAP_OPT -DENABLE_WORK_STEALING_OPT
 
 CUDA_INCLUDES = --options-file CMakeFiles/LuminisApp.dir/includes_CUDA.rsp
 
 CUDA_FLAGS =  --expt-relaxed-constexpr -std=c++17 "--generate-code=arch=compute_52,code=[compute_52,sm_52]"
 
-CXX_DEFINES = 
+CXX_DEFINES = -DENABLE_ASYNC_IO_OPT -DENABLE_CUDA_MEMORY_POOL_OPT -DENABLE_OPENMP_REDUCTION_OPT -DENABLE_OVERLAP_OPT -DENABLE_WORK_STEALING_OPT
 
-CXX_INCLUDES = -I/home/david/Luminis/src -I/opt/openmpi-5.0.8/include -isystem /usr/include/opencv4
+CXX_INCLUDES = -I/mnt/shared/Luminis/src -I/opt/openmpi-5.0.8/include -isystem /usr/include/opencv4
 
 CXX_FLAGS = -std=gnu++17 -fopenmp
 

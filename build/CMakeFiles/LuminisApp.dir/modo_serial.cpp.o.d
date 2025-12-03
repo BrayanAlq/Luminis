@@ -1,5 +1,5 @@
 CMakeFiles/LuminisApp.dir/modo_serial.cpp.o: \
- /home/david/Luminis/src/modo_serial.cpp /usr/include/stdc-predef.h \
+ /mnt/shared/Luminis/src/modo_serial.cpp /usr/include/stdc-predef.h \
  /usr/include/opencv4/opencv2/opencv.hpp \
  /usr/include/opencv4/opencv2/opencv_modules.hpp \
  /usr/include/opencv4/opencv2/core.hpp \

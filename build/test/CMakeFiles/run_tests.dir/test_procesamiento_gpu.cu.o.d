@@ -1,4 +1,4 @@
-test/CMakeFiles/run_tests.dir/test_procesamiento_gpu.cu.o : /home/david/Luminis/src/test/test_procesamiento_gpu.cu \
+test/CMakeFiles/run_tests.dir/test_procesamiento_gpu.cu.o : /mnt/shared/Luminis/src/test/test_procesamiento_gpu.cu \
     /usr/include/stdc-predef.h \
     /usr/include/cuda_runtime.h \
     /usr/include/crt/host_config.h \
@@ -424,7 +424,7 @@ test/CMakeFiles/run_tests.dir/test_procesamiento_gpu.cu.o : /home/david/Luminis/
     /usr/include/gtest/gtest-typed-test.h \
     /usr/include/gtest/gtest_pred_impl.h \
     /usr/include/gtest/gtest_prod.h \
-    /home/david/Luminis/src/procesamiento_gpu.hpp \
+    /mnt/shared/Luminis/src/procesamiento_gpu.hpp \
     /usr/include/opencv4/opencv2/opencv.hpp \
     /usr/include/opencv4/opencv2/opencv_modules.hpp \
     /usr/include/opencv4/opencv2/core.hpp \
@@ -538,4 +538,7 @@ test/CMakeFiles/run_tests.dir/test_procesamiento_gpu.cu.o : /home/david/Luminis/
     /usr/include/opencv4/opencv2/stitching/detail/blenders.hpp \
     /usr/include/opencv4/opencv2/video.hpp \
     /usr/include/opencv4/opencv2/video/tracking.hpp \
-    /usr/include/opencv4/opencv2/video/background_segm.hpp
+    /usr/include/opencv4/opencv2/video/background_segm.hpp \
+    /usr/include/c++/12/thread \
+    /usr/include/c++/12/bits/std_thread.h \
+    /usr/include/c++/12/bits/this_thread_sleep.h

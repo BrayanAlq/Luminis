@@ -3,6 +3,7 @@
 #include <vector>
 #include <string>
 #include <queue>
+#include <mpi.h>
 #include <mutex>
 
 void ejecutarMaestro(int world_size);
@@ -26,8 +27,7 @@ struct WorkItem {
 class WorkQueue {
 private:
     std::queue<WorkItem> pending_work;
-    std::mutex queue_mutex;
-    
+	mutable std::mutex queue_mutex;    
 public:
     void addWork(const std::vector<WorkItem>& items);
     bool getNextWork(WorkItem& work);

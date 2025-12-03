@@ -1,5 +1,5 @@
 test/CMakeFiles/run_tests.dir/test_preprocesamiento.cpp.o: \
- /home/david/Luminis/src/test/test_preprocesamiento.cpp \
+ /mnt/shared/Luminis/src/test/test_preprocesamiento.cpp \
  /usr/include/stdc-predef.h /usr/include/gtest/gtest.h \
  /usr/include/c++/13/cstddef \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
@@ -274,7 +274,7 @@ test/CMakeFiles/run_tests.dir/test_preprocesamiento.cpp.o: \
  /usr/include/gtest/gtest-test-part.h \
  /usr/include/gtest/gtest-typed-test.h \
  /usr/include/gtest/gtest_pred_impl.h /usr/include/gtest/gtest_prod.h \
- /home/david/Luminis/src/preprocesamiento.hpp \
+ /mnt/shared/Luminis/src/preprocesamiento.hpp \
  /usr/include/opencv4/opencv2/opencv.hpp \
  /usr/include/opencv4/opencv2/opencv_modules.hpp \
  /usr/include/opencv4/opencv2/core.hpp \

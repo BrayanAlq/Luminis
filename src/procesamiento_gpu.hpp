@@ -4,6 +4,11 @@
 #include <vector>
 #include <string>
 #include <cuda_runtime.h>
+#include <thread>
+#include <mutex>
+#include <atomic>
+#include <condition_variable>
+
 
 // Declare the kernel launcher as an extern "C" function
 extern "C" void aplicarLUTCUDA_Lote(const std::vector<std::string>& rutas, const std::vector<unsigned char>& lut_data);
@@ -57,7 +62,7 @@ struct SaveTask {
 class AsyncIOManager {
 private:
     std::queue<SaveTask> save_queue;
-    std::mutex queue_mutex;
+	mutable std::mutex queue_mutex;    
     std::condition_variable queue_cv;
     std::thread io_thread;
     std::atomic<bool> running{false};

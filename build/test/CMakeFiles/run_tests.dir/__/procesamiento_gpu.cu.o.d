@@ -1,4 +1,4 @@
-test/CMakeFiles/run_tests.dir/__/procesamiento_gpu.cu.o : /home/david/Luminis/src/procesamiento_gpu.cu \
+test/CMakeFiles/run_tests.dir/__/procesamiento_gpu.cu.o : /mnt/shared/Luminis/src/procesamiento_gpu.cu \
     /usr/include/stdc-predef.h \
     /usr/include/cuda_runtime.h \
     /usr/include/crt/host_config.h \
@@ -180,7 +180,7 @@ test/CMakeFiles/run_tests.dir/__/procesamiento_gpu.cu.o : /home/david/Luminis/sr
     /usr/include/c++/12/utility \
     /usr/include/c++/12/bits/stl_relops.h \
     /usr/include/c++/12/initializer_list \
-    /home/david/Luminis/src/procesamiento_gpu.hpp \
+    /mnt/shared/Luminis/src/procesamiento_gpu.hpp \
     /usr/include/opencv4/opencv2/opencv.hpp \
     /usr/include/opencv4/opencv2/opencv_modules.hpp \
     /usr/include/opencv4/opencv2/core.hpp \
@@ -456,6 +456,11 @@ test/CMakeFiles/run_tests.dir/__/procesamiento_gpu.cu.o : /home/david/Luminis/sr
     /usr/include/opencv4/opencv2/video.hpp \
     /usr/include/opencv4/opencv2/video/tracking.hpp \
     /usr/include/opencv4/opencv2/video/background_segm.hpp \
+    /usr/include/c++/12/thread \
+    /usr/include/c++/12/bits/std_thread.h \
+    /usr/include/c++/12/bits/this_thread_sleep.h \
+    /usr/include/c++/12/atomic \
+    /usr/include/c++/12/condition_variable \
     /usr/include/c++/12/filesystem \
     /usr/include/c++/12/bits/fs_fwd.h \
     /usr/include/c++/12/bits/fs_path.h \

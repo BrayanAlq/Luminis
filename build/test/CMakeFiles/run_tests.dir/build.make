@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/david/Luminis/src
+CMAKE_SOURCE_DIR = /mnt/shared/Luminis/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/david/Luminis/build
+CMAKE_BINARY_DIR = /mnt/shared/Luminis/build
 
 # Include any dependencies generated for this target.
 include test/CMakeFiles/run_tests.dir/depend.make
@@ -70,53 +70,53 @@ include test/CMakeFiles/run_tests.dir/progress.make
 include test/CMakeFiles/run_tests.dir/flags.make
 
 test/CMakeFiles/run_tests.dir/test_main.cpp.o: test/CMakeFiles/run_tests.dir/flags.make
-test/CMakeFiles/run_tests.dir/test_main.cpp.o: /home/david/Luminis/src/test/test_main.cpp
+test/CMakeFiles/run_tests.dir/test_main.cpp.o: /mnt/shared/Luminis/src/test/test_main.cpp
 test/CMakeFiles/run_tests.dir/test_main.cpp.o: test/CMakeFiles/run_tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/david/Luminis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/CMakeFiles/run_tests.dir/test_main.cpp.o"
-	cd /home/david/Luminis/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT test/CMakeFiles/run_tests.dir/test_main.cpp.o -MF CMakeFiles/run_tests.dir/test_main.cpp.o.d -o CMakeFiles/run_tests.dir/test_main.cpp.o -c /home/david/Luminis/src/test/test_main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/shared/Luminis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/CMakeFiles/run_tests.dir/test_main.cpp.o"
+	cd /mnt/shared/Luminis/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT test/CMakeFiles/run_tests.dir/test_main.cpp.o -MF CMakeFiles/run_tests.dir/test_main.cpp.o.d -o CMakeFiles/run_tests.dir/test_main.cpp.o -c /mnt/shared/Luminis/src/test/test_main.cpp
 
 test/CMakeFiles/run_tests.dir/test_main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/run_tests.dir/test_main.cpp.i"
-	cd /home/david/Luminis/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/david/Luminis/src/test/test_main.cpp > CMakeFiles/run_tests.dir/test_main.cpp.i
+	cd /mnt/shared/Luminis/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/shared/Luminis/src/test/test_main.cpp > CMakeFiles/run_tests.dir/test_main.cpp.i
 
 test/CMakeFiles/run_tests.dir/test_main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/run_tests.dir/test_main.cpp.s"
-	cd /home/david/Luminis/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/david/Luminis/src/test/test_main.cpp -o CMakeFiles/run_tests.dir/test_main.cpp.s
+	cd /mnt/shared/Luminis/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/shared/Luminis/src/test/test_main.cpp -o CMakeFiles/run_tests.dir/test_main.cpp.s
 
 test/CMakeFiles/run_tests.dir/test_filesystem.cpp.o: test/CMakeFiles/run_tests.dir/flags.make
-test/CMakeFiles/run_tests.dir/test_filesystem.cpp.o: /home/david/Luminis/src/test/test_filesystem.cpp
+test/CMakeFiles/run_tests.dir/test_filesystem.cpp.o: /mnt/shared/Luminis/src/test/test_filesystem.cpp
 test/CMakeFiles/run_tests.dir/test_filesystem.cpp.o: test/CMakeFiles/run_tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/david/Luminis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object test/CMakeFiles/run_tests.dir/test_filesystem.cpp.o"
-	cd /home/david/Luminis/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT test/CMakeFiles/run_tests.dir/test_filesystem.cpp.o -MF CMakeFiles/run_tests.dir/test_filesystem.cpp.o.d -o CMakeFiles/run_tests.dir/test_filesystem.cpp.o -c /home/david/Luminis/src/test/test_filesystem.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/shared/Luminis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object test/CMakeFiles/run_tests.dir/test_filesystem.cpp.o"
+	cd /mnt/shared/Luminis/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT test/CMakeFiles/run_tests.dir/test_filesystem.cpp.o -MF CMakeFiles/run_tests.dir/test_filesystem.cpp.o.d -o CMakeFiles/run_tests.dir/test_filesystem.cpp.o -c /mnt/shared/Luminis/src/test/test_filesystem.cpp
 
 test/CMakeFiles/run_tests.dir/test_filesystem.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/run_tests.dir/test_filesystem.cpp.i"
-	cd /home/david/Luminis/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/david/Luminis/src/test/test_filesystem.cpp > CMakeFiles/run_tests.dir/test_filesystem.cpp.i
+	cd /mnt/shared/Luminis/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/shared/Luminis/src/test/test_filesystem.cpp > CMakeFiles/run_tests.dir/test_filesystem.cpp.i
 
 test/CMakeFiles/run_tests.dir/test_filesystem.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/run_tests.dir/test_filesystem.cpp.s"
-	cd /home/david/Luminis/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/david/Luminis/src/test/test_filesystem.cpp -o CMakeFiles/run_tests.dir/test_filesystem.cpp.s
+	cd /mnt/shared/Luminis/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/shared/Luminis/src/test/test_filesystem.cpp -o CMakeFiles/run_tests.dir/test_filesystem.cpp.s
 
 test/CMakeFiles/run_tests.dir/test_preprocesamiento.cpp.o: test/CMakeFiles/run_tests.dir/flags.make
-test/CMakeFiles/run_tests.dir/test_preprocesamiento.cpp.o: /home/david/Luminis/src/test/test_preprocesamiento.cpp
+test/CMakeFiles/run_tests.dir/test_preprocesamiento.cpp.o: /mnt/shared/Luminis/src/test/test_preprocesamiento.cpp
 test/CMakeFiles/run_tests.dir/test_preprocesamiento.cpp.o: test/CMakeFiles/run_tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/david/Luminis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object test/CMakeFiles/run_tests.dir/test_preprocesamiento.cpp.o"
-	cd /home/david/Luminis/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT test/CMakeFiles/run_tests.dir/test_preprocesamiento.cpp.o -MF CMakeFiles/run_tests.dir/test_preprocesamiento.cpp.o.d -o CMakeFiles/run_tests.dir/test_preprocesamiento.cpp.o -c /home/david/Luminis/src/test/test_preprocesamiento.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/shared/Luminis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object test/CMakeFiles/run_tests.dir/test_preprocesamiento.cpp.o"
+	cd /mnt/shared/Luminis/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT test/CMakeFiles/run_tests.dir/test_preprocesamiento.cpp.o -MF CMakeFiles/run_tests.dir/test_preprocesamiento.cpp.o.d -o CMakeFiles/run_tests.dir/test_preprocesamiento.cpp.o -c /mnt/shared/Luminis/src/test/test_preprocesamiento.cpp
 
 test/CMakeFiles/run_tests.dir/test_preprocesamiento.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/run_tests.dir/test_preprocesamiento.cpp.i"
-	cd /home/david/Luminis/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/david/Luminis/src/test/test_preprocesamiento.cpp > CMakeFiles/run_tests.dir/test_preprocesamiento.cpp.i
+	cd /mnt/shared/Luminis/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/shared/Luminis/src/test/test_preprocesamiento.cpp > CMakeFiles/run_tests.dir/test_preprocesamiento.cpp.i
 
 test/CMakeFiles/run_tests.dir/test_preprocesamiento.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/run_tests.dir/test_preprocesamiento.cpp.s"
-	cd /home/david/Luminis/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/david/Luminis/src/test/test_preprocesamiento.cpp -o CMakeFiles/run_tests.dir/test_preprocesamiento.cpp.s
+	cd /mnt/shared/Luminis/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/shared/Luminis/src/test/test_preprocesamiento.cpp -o CMakeFiles/run_tests.dir/test_preprocesamiento.cpp.s
 
 test/CMakeFiles/run_tests.dir/test_procesamiento_gpu.cu.o: test/CMakeFiles/run_tests.dir/flags.make
 test/CMakeFiles/run_tests.dir/test_procesamiento_gpu.cu.o: test/CMakeFiles/run_tests.dir/includes_CUDA.rsp
-test/CMakeFiles/run_tests.dir/test_procesamiento_gpu.cu.o: /home/david/Luminis/src/test/test_procesamiento_gpu.cu
+test/CMakeFiles/run_tests.dir/test_procesamiento_gpu.cu.o: /mnt/shared/Luminis/src/test/test_procesamiento_gpu.cu
 test/CMakeFiles/run_tests.dir/test_procesamiento_gpu.cu.o: test/CMakeFiles/run_tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/david/Luminis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CUDA object test/CMakeFiles/run_tests.dir/test_procesamiento_gpu.cu.o"
-	cd /home/david/Luminis/build/test && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT test/CMakeFiles/run_tests.dir/test_procesamiento_gpu.cu.o -MF CMakeFiles/run_tests.dir/test_procesamiento_gpu.cu.o.d -x cu -rdc=true -c /home/david/Luminis/src/test/test_procesamiento_gpu.cu -o CMakeFiles/run_tests.dir/test_procesamiento_gpu.cu.o
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/shared/Luminis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CUDA object test/CMakeFiles/run_tests.dir/test_procesamiento_gpu.cu.o"
+	cd /mnt/shared/Luminis/build/test && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT test/CMakeFiles/run_tests.dir/test_procesamiento_gpu.cu.o -MF CMakeFiles/run_tests.dir/test_procesamiento_gpu.cu.o.d -x cu -rdc=true -c /mnt/shared/Luminis/src/test/test_procesamiento_gpu.cu -o CMakeFiles/run_tests.dir/test_procesamiento_gpu.cu.o
 
 test/CMakeFiles/run_tests.dir/test_procesamiento_gpu.cu.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CUDA source to CMakeFiles/run_tests.dir/test_procesamiento_gpu.cu.i"
@@ -127,39 +127,39 @@ test/CMakeFiles/run_tests.dir/test_procesamiento_gpu.cu.s: cmake_force
 	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_ASSEMBLY_SOURCE
 
 test/CMakeFiles/run_tests.dir/__/filesystem_utils.cpp.o: test/CMakeFiles/run_tests.dir/flags.make
-test/CMakeFiles/run_tests.dir/__/filesystem_utils.cpp.o: /home/david/Luminis/src/filesystem_utils.cpp
+test/CMakeFiles/run_tests.dir/__/filesystem_utils.cpp.o: /mnt/shared/Luminis/src/filesystem_utils.cpp
 test/CMakeFiles/run_tests.dir/__/filesystem_utils.cpp.o: test/CMakeFiles/run_tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/david/Luminis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object test/CMakeFiles/run_tests.dir/__/filesystem_utils.cpp.o"
-	cd /home/david/Luminis/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT test/CMakeFiles/run_tests.dir/__/filesystem_utils.cpp.o -MF CMakeFiles/run_tests.dir/__/filesystem_utils.cpp.o.d -o CMakeFiles/run_tests.dir/__/filesystem_utils.cpp.o -c /home/david/Luminis/src/filesystem_utils.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/shared/Luminis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object test/CMakeFiles/run_tests.dir/__/filesystem_utils.cpp.o"
+	cd /mnt/shared/Luminis/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT test/CMakeFiles/run_tests.dir/__/filesystem_utils.cpp.o -MF CMakeFiles/run_tests.dir/__/filesystem_utils.cpp.o.d -o CMakeFiles/run_tests.dir/__/filesystem_utils.cpp.o -c /mnt/shared/Luminis/src/filesystem_utils.cpp
 
 test/CMakeFiles/run_tests.dir/__/filesystem_utils.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/run_tests.dir/__/filesystem_utils.cpp.i"
-	cd /home/david/Luminis/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/david/Luminis/src/filesystem_utils.cpp > CMakeFiles/run_tests.dir/__/filesystem_utils.cpp.i
+	cd /mnt/shared/Luminis/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/shared/Luminis/src/filesystem_utils.cpp > CMakeFiles/run_tests.dir/__/filesystem_utils.cpp.i
 
 test/CMakeFiles/run_tests.dir/__/filesystem_utils.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/run_tests.dir/__/filesystem_utils.cpp.s"
-	cd /home/david/Luminis/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/david/Luminis/src/filesystem_utils.cpp -o CMakeFiles/run_tests.dir/__/filesystem_utils.cpp.s
+	cd /mnt/shared/Luminis/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/shared/Luminis/src/filesystem_utils.cpp -o CMakeFiles/run_tests.dir/__/filesystem_utils.cpp.s
 
 test/CMakeFiles/run_tests.dir/__/preprocesamiento.cpp.o: test/CMakeFiles/run_tests.dir/flags.make
-test/CMakeFiles/run_tests.dir/__/preprocesamiento.cpp.o: /home/david/Luminis/src/preprocesamiento.cpp
+test/CMakeFiles/run_tests.dir/__/preprocesamiento.cpp.o: /mnt/shared/Luminis/src/preprocesamiento.cpp
 test/CMakeFiles/run_tests.dir/__/preprocesamiento.cpp.o: test/CMakeFiles/run_tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/david/Luminis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object test/CMakeFiles/run_tests.dir/__/preprocesamiento.cpp.o"
-	cd /home/david/Luminis/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT test/CMakeFiles/run_tests.dir/__/preprocesamiento.cpp.o -MF CMakeFiles/run_tests.dir/__/preprocesamiento.cpp.o.d -o CMakeFiles/run_tests.dir/__/preprocesamiento.cpp.o -c /home/david/Luminis/src/preprocesamiento.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/shared/Luminis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object test/CMakeFiles/run_tests.dir/__/preprocesamiento.cpp.o"
+	cd /mnt/shared/Luminis/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT test/CMakeFiles/run_tests.dir/__/preprocesamiento.cpp.o -MF CMakeFiles/run_tests.dir/__/preprocesamiento.cpp.o.d -o CMakeFiles/run_tests.dir/__/preprocesamiento.cpp.o -c /mnt/shared/Luminis/src/preprocesamiento.cpp
 
 test/CMakeFiles/run_tests.dir/__/preprocesamiento.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/run_tests.dir/__/preprocesamiento.cpp.i"
-	cd /home/david/Luminis/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/david/Luminis/src/preprocesamiento.cpp > CMakeFiles/run_tests.dir/__/preprocesamiento.cpp.i
+	cd /mnt/shared/Luminis/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/shared/Luminis/src/preprocesamiento.cpp > CMakeFiles/run_tests.dir/__/preprocesamiento.cpp.i
 
 test/CMakeFiles/run_tests.dir/__/preprocesamiento.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/run_tests.dir/__/preprocesamiento.cpp.s"
-	cd /home/david/Luminis/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/david/Luminis/src/preprocesamiento.cpp -o CMakeFiles/run_tests.dir/__/preprocesamiento.cpp.s
+	cd /mnt/shared/Luminis/build/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/shared/Luminis/src/preprocesamiento.cpp -o CMakeFiles/run_tests.dir/__/preprocesamiento.cpp.s
 
 test/CMakeFiles/run_tests.dir/__/procesamiento_gpu.cu.o: test/CMakeFiles/run_tests.dir/flags.make
 test/CMakeFiles/run_tests.dir/__/procesamiento_gpu.cu.o: test/CMakeFiles/run_tests.dir/includes_CUDA.rsp
-test/CMakeFiles/run_tests.dir/__/procesamiento_gpu.cu.o: /home/david/Luminis/src/procesamiento_gpu.cu
+test/CMakeFiles/run_tests.dir/__/procesamiento_gpu.cu.o: /mnt/shared/Luminis/src/procesamiento_gpu.cu
 test/CMakeFiles/run_tests.dir/__/procesamiento_gpu.cu.o: test/CMakeFiles/run_tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/david/Luminis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CUDA object test/CMakeFiles/run_tests.dir/__/procesamiento_gpu.cu.o"
-	cd /home/david/Luminis/build/test && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT test/CMakeFiles/run_tests.dir/__/procesamiento_gpu.cu.o -MF CMakeFiles/run_tests.dir/__/procesamiento_gpu.cu.o.d -x cu -rdc=true -c /home/david/Luminis/src/procesamiento_gpu.cu -o CMakeFiles/run_tests.dir/__/procesamiento_gpu.cu.o
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/shared/Luminis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CUDA object test/CMakeFiles/run_tests.dir/__/procesamiento_gpu.cu.o"
+	cd /mnt/shared/Luminis/build/test && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT test/CMakeFiles/run_tests.dir/__/procesamiento_gpu.cu.o -MF CMakeFiles/run_tests.dir/__/procesamiento_gpu.cu.o.d -x cu -rdc=true -c /mnt/shared/Luminis/src/procesamiento_gpu.cu -o CMakeFiles/run_tests.dir/__/procesamiento_gpu.cu.o
 
 test/CMakeFiles/run_tests.dir/__/procesamiento_gpu.cu.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CUDA source to CMakeFiles/run_tests.dir/__/procesamiento_gpu.cu.i"
@@ -250,8 +250,8 @@ test/CMakeFiles/run_tests.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/lib
 test/CMakeFiles/run_tests.dir/cmake_device_link.o: test/CMakeFiles/run_tests.dir/deviceLinkLibs.rsp
 test/CMakeFiles/run_tests.dir/cmake_device_link.o: test/CMakeFiles/run_tests.dir/deviceObjects1.rsp
 test/CMakeFiles/run_tests.dir/cmake_device_link.o: test/CMakeFiles/run_tests.dir/dlink.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/david/Luminis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CUDA device code CMakeFiles/run_tests.dir/cmake_device_link.o"
-	cd /home/david/Luminis/build/test && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/run_tests.dir/dlink.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/shared/Luminis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CUDA device code CMakeFiles/run_tests.dir/cmake_device_link.o"
+	cd /mnt/shared/Luminis/build/test && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/run_tests.dir/dlink.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 test/CMakeFiles/run_tests.dir/build: test/CMakeFiles/run_tests.dir/cmake_device_link.o
@@ -337,18 +337,18 @@ test/run_tests: /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.4.6.0
 test/run_tests: /usr/lib/x86_64-linux-gnu/libopencv_core.so.4.6.0
 test/run_tests: test/CMakeFiles/run_tests.dir/cmake_device_link.o
 test/run_tests: test/CMakeFiles/run_tests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/david/Luminis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable run_tests"
-	cd /home/david/Luminis/build/test && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/run_tests.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/shared/Luminis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable run_tests"
+	cd /mnt/shared/Luminis/build/test && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/run_tests.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 test/CMakeFiles/run_tests.dir/build: test/run_tests
 .PHONY : test/CMakeFiles/run_tests.dir/build
 
 test/CMakeFiles/run_tests.dir/clean:
-	cd /home/david/Luminis/build/test && $(CMAKE_COMMAND) -P CMakeFiles/run_tests.dir/cmake_clean.cmake
+	cd /mnt/shared/Luminis/build/test && $(CMAKE_COMMAND) -P CMakeFiles/run_tests.dir/cmake_clean.cmake
 .PHONY : test/CMakeFiles/run_tests.dir/clean
 
 test/CMakeFiles/run_tests.dir/depend:
-	cd /home/david/Luminis/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/david/Luminis/src /home/david/Luminis/src/test /home/david/Luminis/build /home/david/Luminis/build/test /home/david/Luminis/build/test/CMakeFiles/run_tests.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /mnt/shared/Luminis/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/shared/Luminis/src /mnt/shared/Luminis/src/test /mnt/shared/Luminis/build /mnt/shared/Luminis/build/test /mnt/shared/Luminis/build/test/CMakeFiles/run_tests.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : test/CMakeFiles/run_tests.dir/depend
 

@@ -1,4 +1,4 @@
-CMakeFiles/LuminisApp.dir/main.cpp.o: /home/david/Luminis/src/main.cpp \
+CMakeFiles/LuminisApp.dir/main.cpp.o: /mnt/shared/Luminis/src/main.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/13/iostream \
  /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
@@ -149,6 +149,6 @@ CMakeFiles/LuminisApp.dir/main.cpp.o: /home/david/Luminis/src/main.cpp \
  /usr/include/c++/13/bits/basic_ios.tcc \
  /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/istream \
  /usr/include/c++/13/bits/istream.tcc \
- /home/david/Luminis/src/modo_serial.hpp \
- /home/david/Luminis/src/modo_openmp_cuda.hpp \
- /home/david/Luminis/src/modo_mpi_openmp_cuda.hpp
+ /mnt/shared/Luminis/src/modo_serial.hpp \
+ /mnt/shared/Luminis/src/modo_openmp_cuda.hpp \
+ /mnt/shared/Luminis/src/modo_mpi_openmp_cuda.hpp

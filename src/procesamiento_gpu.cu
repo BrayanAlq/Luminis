@@ -249,6 +249,10 @@ void aplicarLUTCUDA_Lote(const std::vector<std::string>& rutas, const std::vecto
     cout << "[MASTER-GPU] Procesando lote con I/O asíncrono: " << rutas.size() << " imágenes.\n";
     aplicarLUTCUDA_Lote_AsyncIO(rutas, lut_data);
 #else
+	// ¡AQUI ESTABA EL ERROR! Faltaba definir esta línea:
+    size_t num_imagenes = rutas.size(); 
+    // ---------------------------------------------------------
+
     cout << "[MASTER-GPU] Procesando lote de " << rutas.size() << " imágenes con " << NUM_STREAMS << " streams.\n";
 
 #ifdef ENABLE_CUDA_MEMORY_POOL_OPT

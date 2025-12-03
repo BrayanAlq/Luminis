@@ -1,5 +1,6 @@
 CMakeFiles/LuminisApp.dir/preprocesamiento.cpp.o: \
- /home/david/Luminis/src/preprocesamiento.cpp /usr/include/stdc-predef.h \
+ /mnt/shared/Luminis/src/preprocesamiento.cpp /usr/include/stdc-predef.h \
+ /mnt/shared/Luminis/src/preprocesamiento.hpp \
  /usr/include/opencv4/opencv2/opencv.hpp \
  /usr/include/opencv4/opencv2/opencv_modules.hpp \
  /usr/include/opencv4/opencv2/core.hpp \

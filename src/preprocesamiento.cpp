@@ -32,21 +32,30 @@ std::vector<unsigned char> calcularLUT(const cv::Mat& img) {
         return lut;
     }
     
-// 1. CÁLCULO DEL HISTOGRAMA (Paralelizado con OpenMP)
+    // 1. CÁLCULO DEL HISTOGRAMA (Paralelizado con OpenMP)
+    // Usamos vector para el resultado final porque se necesita más abajo
     vector<int> hist(256, 0);
     long long totalPixels = (long long)img.rows * img.cols;
     
 #ifdef ENABLE_OPENMP_REDUCTION_OPT
-    // Optimización: Reducción nativa OpenMP (v5.0+)
-    #pragma omp parallel for reduction(+:hist[:256])
+    // --- CORRECCIÓN: Usar array crudo para la reducción ---
+    int hist_temp[256] = {0}; // Array temporal en stack
+
+    // Optimización: Reducción nativa OpenMP sobre array crudo
+    #pragma omp parallel for reduction(+:hist_temp[:256])
     for (int r = 0; r < img.rows; ++r) {
         const uchar* rowptr = img.ptr<uchar>(r);
         for (int c = 0; c < img.cols; ++c) {
-            hist[rowptr[c]]++;
+            hist_temp[rowptr[c]]++;
         }
     }
+
+    // Copiar resultados del array temporal al vector std
+    for (int i = 0; i < 256; ++i) {
+        hist[i] = hist_temp[i];
+    }
 #else
-    // Implementación original con critical section
+    // Implementación original con critical section (más lenta pero compatible)
     #pragma omp parallel 
     {
         vector<int> histLocal(256, 0); 

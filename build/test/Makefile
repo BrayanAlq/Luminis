@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/david/Luminis/src
+CMAKE_SOURCE_DIR = /mnt/shared/Luminis/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/david/Luminis/build
+CMAKE_BINARY_DIR = /mnt/shared/Luminis/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/david/Luminis/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/david/Luminis/build/CMakeFiles /home/david/Luminis/build/test//CMakeFiles/progress.marks
-	cd /home/david/Luminis/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/david/Luminis/build/CMakeFiles 0
+	cd /mnt/shared/Luminis/build && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/shared/Luminis/build/CMakeFiles /mnt/shared/Luminis/build/test//CMakeFiles/progress.marks
+	cd /mnt/shared/Luminis/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/shared/Luminis/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/david/Luminis/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/clean
+	cd /mnt/shared/Luminis/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/david/Luminis/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/preinstall
+	cd /mnt/shared/Luminis/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/david/Luminis/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/preinstall
+	cd /mnt/shared/Luminis/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/david/Luminis/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /mnt/shared/Luminis/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 test/CMakeFiles/run_tests.dir/rule:
-	cd /home/david/Luminis/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/run_tests.dir/rule
+	cd /mnt/shared/Luminis/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/run_tests.dir/rule
 .PHONY : test/CMakeFiles/run_tests.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ run_tests: test/CMakeFiles/run_tests.dir/rule
 
 # fast build rule for target.
 run_tests/fast:
-	cd /home/david/Luminis/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/run_tests.dir/build.make test/CMakeFiles/run_tests.dir/build
+	cd /mnt/shared/Luminis/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/run_tests.dir/build.make test/CMakeFiles/run_tests.dir/build
 .PHONY : run_tests/fast
 
 __/filesystem_utils.o: __/filesystem_utils.cpp.o
@@ -135,7 +135,7 @@ __/filesystem_utils.o: __/filesystem_utils.cpp.o
 
 # target to build an object file
 __/filesystem_utils.cpp.o:
-	cd /home/david/Luminis/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/run_tests.dir/build.make test/CMakeFiles/run_tests.dir/__/filesystem_utils.cpp.o
+	cd /mnt/shared/Luminis/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/run_tests.dir/build.make test/CMakeFiles/run_tests.dir/__/filesystem_utils.cpp.o
 .PHONY : __/filesystem_utils.cpp.o
 
 __/filesystem_utils.i: __/filesystem_utils.cpp.i
@@ -143,7 +143,7 @@ __/filesystem_utils.i: __/filesystem_utils.cpp.i
 
 # target to preprocess a source file
 __/filesystem_utils.cpp.i:
-	cd /home/david/Luminis/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/run_tests.dir/build.make test/CMakeFiles/run_tests.dir/__/filesystem_utils.cpp.i
+	cd /mnt/shared/Luminis/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/run_tests.dir/build.make test/CMakeFiles/run_tests.dir/__/filesystem_utils.cpp.i
 .PHONY : __/filesystem_utils.cpp.i
 
 __/filesystem_utils.s: __/filesystem_utils.cpp.s
@@ -151,7 +151,7 @@ __/filesystem_utils.s: __/filesystem_utils.cpp.s
 
 # target to generate assembly for a file
 __/filesystem_utils.cpp.s:
-	cd /home/david/Luminis/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/run_tests.dir/build.make test/CMakeFiles/run_tests.dir/__/filesystem_utils.cpp.s
+	cd /mnt/shared/Luminis/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/run_tests.dir/build.make test/CMakeFiles/run_tests.dir/__/filesystem_utils.cpp.s
 .PHONY : __/filesystem_utils.cpp.s
 
 __/preprocesamiento.o: __/preprocesamiento.cpp.o
@@ -159,7 +159,7 @@ __/preprocesamiento.o: __/preprocesamiento.cpp.o
 
 # target to build an object file
 __/preprocesamiento.cpp.o:
-	cd /home/david/Luminis/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/run_tests.dir/build.make test/CMakeFiles/run_tests.dir/__/preprocesamiento.cpp.o
+	cd /mnt/shared/Luminis/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/run_tests.dir/build.make test/CMakeFiles/run_tests.dir/__/preprocesamiento.cpp.o
 .PHONY : __/preprocesamiento.cpp.o
 
 __/preprocesamiento.i: __/preprocesamiento.cpp.i
@@ -167,7 +167,7 @@ __/preprocesamiento.i: __/preprocesamiento.cpp.i
 
 # target to preprocess a source file
 __/preprocesamiento.cpp.i:
-	cd /home/david/Luminis/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/run_tests.dir/build.make test/CMakeFiles/run_tests.dir/__/preprocesamiento.cpp.i
+	cd /mnt/shared/Luminis/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/run_tests.dir/build.make test/CMakeFiles/run_tests.dir/__/preprocesamiento.cpp.i
 .PHONY : __/preprocesamiento.cpp.i
 
 __/preprocesamiento.s: __/preprocesamiento.cpp.s
@@ -175,7 +175,7 @@ __/preprocesamiento.s: __/preprocesamiento.cpp.s
 
 # target to generate assembly for a file
 __/preprocesamiento.cpp.s:
-	cd /home/david/Luminis/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/run_tests.dir/build.make test/CMakeFiles/run_tests.dir/__/preprocesamiento.cpp.s
+	cd /mnt/shared/Luminis/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/run_tests.dir/build.make test/CMakeFiles/run_tests.dir/__/preprocesamiento.cpp.s
 .PHONY : __/preprocesamiento.cpp.s
 
 __/procesamiento_gpu.o: __/procesamiento_gpu.cu.o
@@ -183,7 +183,7 @@ __/procesamiento_gpu.o: __/procesamiento_gpu.cu.o
 
 # target to build an object file
 __/procesamiento_gpu.cu.o:
-	cd /home/david/Luminis/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/run_tests.dir/build.make test/CMakeFiles/run_tests.dir/__/procesamiento_gpu.cu.o
+	cd /mnt/shared/Luminis/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/run_tests.dir/build.make test/CMakeFiles/run_tests.dir/__/procesamiento_gpu.cu.o
 .PHONY : __/procesamiento_gpu.cu.o
 
 __/procesamiento_gpu.i: __/procesamiento_gpu.cu.i
@@ -191,7 +191,7 @@ __/procesamiento_gpu.i: __/procesamiento_gpu.cu.i
 
 # target to preprocess a source file
 __/procesamiento_gpu.cu.i:
-	cd /home/david/Luminis/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/run_tests.dir/build.make test/CMakeFiles/run_tests.dir/__/procesamiento_gpu.cu.i
+	cd /mnt/shared/Luminis/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/run_tests.dir/build.make test/CMakeFiles/run_tests.dir/__/procesamiento_gpu.cu.i
 .PHONY : __/procesamiento_gpu.cu.i
 
 __/procesamiento_gpu.s: __/procesamiento_gpu.cu.s
@@ -199,7 +199,7 @@ __/procesamiento_gpu.s: __/procesamiento_gpu.cu.s
 
 # target to generate assembly for a file
 __/procesamiento_gpu.cu.s:
-	cd /home/david/Luminis/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/run_tests.dir/build.make test/CMakeFiles/run_tests.dir/__/procesamiento_gpu.cu.s
+	cd /mnt/shared/Luminis/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/run_tests.dir/build.make test/CMakeFiles/run_tests.dir/__/procesamiento_gpu.cu.s
 .PHONY : __/procesamiento_gpu.cu.s
 
 test_filesystem.o: test_filesystem.cpp.o
@@ -207,7 +207,7 @@ test_filesystem.o: test_filesystem.cpp.o
 
 # target to build an object file
 test_filesystem.cpp.o:
-	cd /home/david/Luminis/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/run_tests.dir/build.make test/CMakeFiles/run_tests.dir/test_filesystem.cpp.o
+	cd /mnt/shared/Luminis/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/run_tests.dir/build.make test/CMakeFiles/run_tests.dir/test_filesystem.cpp.o
 .PHONY : test_filesystem.cpp.o
 
 test_filesystem.i: test_filesystem.cpp.i
@@ -215,7 +215,7 @@ test_filesystem.i: test_filesystem.cpp.i
 
 # target to preprocess a source file
 test_filesystem.cpp.i:
-	cd /home/david/Luminis/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/run_tests.dir/build.make test/CMakeFiles/run_tests.dir/test_filesystem.cpp.i
+	cd /mnt/shared/Luminis/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/run_tests.dir/build.make test/CMakeFiles/run_tests.dir/test_filesystem.cpp.i
 .PHONY : test_filesystem.cpp.i
 
 test_filesystem.s: test_filesystem.cpp.s
@@ -223,7 +223,7 @@ test_filesystem.s: test_filesystem.cpp.s
 
 # target to generate assembly for a file
 test_filesystem.cpp.s:
-	cd /home/david/Luminis/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/run_tests.dir/build.make test/CMakeFiles/run_tests.dir/test_filesystem.cpp.s
+	cd /mnt/shared/Luminis/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/run_tests.dir/build.make test/CMakeFiles/run_tests.dir/test_filesystem.cpp.s
 .PHONY : test_filesystem.cpp.s
 
 test_main.o: test_main.cpp.o
@@ -231,7 +231,7 @@ test_main.o: test_main.cpp.o
 
 # target to build an object file
 test_main.cpp.o:
-	cd /home/david/Luminis/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/run_tests.dir/build.make test/CMakeFiles/run_tests.dir/test_main.cpp.o
+	cd /mnt/shared/Luminis/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/run_tests.dir/build.make test/CMakeFiles/run_tests.dir/test_main.cpp.o
 .PHONY : test_main.cpp.o
 
 test_main.i: test_main.cpp.i
@@ -239,7 +239,7 @@ test_main.i: test_main.cpp.i
 
 # target to preprocess a source file
 test_main.cpp.i:
-	cd /home/david/Luminis/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/run_tests.dir/build.make test/CMakeFiles/run_tests.dir/test_main.cpp.i
+	cd /mnt/shared/Luminis/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/run_tests.dir/build.make test/CMakeFiles/run_tests.dir/test_main.cpp.i
 .PHONY : test_main.cpp.i
 
 test_main.s: test_main.cpp.s
@@ -247,7 +247,7 @@ test_main.s: test_main.cpp.s
 
 # target to generate assembly for a file
 test_main.cpp.s:
-	cd /home/david/Luminis/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/run_tests.dir/build.make test/CMakeFiles/run_tests.dir/test_main.cpp.s
+	cd /mnt/shared/Luminis/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/run_tests.dir/build.make test/CMakeFiles/run_tests.dir/test_main.cpp.s
 .PHONY : test_main.cpp.s
 
 test_preprocesamiento.o: test_preprocesamiento.cpp.o
@@ -255,7 +255,7 @@ test_preprocesamiento.o: test_preprocesamiento.cpp.o
 
 # target to build an object file
 test_preprocesamiento.cpp.o:
-	cd /home/david/Luminis/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/run_tests.dir/build.make test/CMakeFiles/run_tests.dir/test_preprocesamiento.cpp.o
+	cd /mnt/shared/Luminis/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/run_tests.dir/build.make test/CMakeFiles/run_tests.dir/test_preprocesamiento.cpp.o
 .PHONY : test_preprocesamiento.cpp.o
 
 test_preprocesamiento.i: test_preprocesamiento.cpp.i
@@ -263,7 +263,7 @@ test_preprocesamiento.i: test_preprocesamiento.cpp.i
 
 # target to preprocess a source file
 test_preprocesamiento.cpp.i:
-	cd /home/david/Luminis/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/run_tests.dir/build.make test/CMakeFiles/run_tests.dir/test_preprocesamiento.cpp.i
+	cd /mnt/shared/Luminis/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/run_tests.dir/build.make test/CMakeFiles/run_tests.dir/test_preprocesamiento.cpp.i
 .PHONY : test_preprocesamiento.cpp.i
 
 test_preprocesamiento.s: test_preprocesamiento.cpp.s
@@ -271,7 +271,7 @@ test_preprocesamiento.s: test_preprocesamiento.cpp.s
 
 # target to generate assembly for a file
 test_preprocesamiento.cpp.s:
-	cd /home/david/Luminis/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/run_tests.dir/build.make test/CMakeFiles/run_tests.dir/test_preprocesamiento.cpp.s
+	cd /mnt/shared/Luminis/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/run_tests.dir/build.make test/CMakeFiles/run_tests.dir/test_preprocesamiento.cpp.s
 .PHONY : test_preprocesamiento.cpp.s
 
 test_procesamiento_gpu.o: test_procesamiento_gpu.cu.o
@@ -279,7 +279,7 @@ test_procesamiento_gpu.o: test_procesamiento_gpu.cu.o
 
 # target to build an object file
 test_procesamiento_gpu.cu.o:
-	cd /home/david/Luminis/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/run_tests.dir/build.make test/CMakeFiles/run_tests.dir/test_procesamiento_gpu.cu.o
+	cd /mnt/shared/Luminis/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/run_tests.dir/build.make test/CMakeFiles/run_tests.dir/test_procesamiento_gpu.cu.o
 .PHONY : test_procesamiento_gpu.cu.o
 
 test_procesamiento_gpu.i: test_procesamiento_gpu.cu.i
@@ -287,7 +287,7 @@ test_procesamiento_gpu.i: test_procesamiento_gpu.cu.i
 
 # target to preprocess a source file
 test_procesamiento_gpu.cu.i:
-	cd /home/david/Luminis/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/run_tests.dir/build.make test/CMakeFiles/run_tests.dir/test_procesamiento_gpu.cu.i
+	cd /mnt/shared/Luminis/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/run_tests.dir/build.make test/CMakeFiles/run_tests.dir/test_procesamiento_gpu.cu.i
 .PHONY : test_procesamiento_gpu.cu.i
 
 test_procesamiento_gpu.s: test_procesamiento_gpu.cu.s
@@ -295,7 +295,7 @@ test_procesamiento_gpu.s: test_procesamiento_gpu.cu.s
 
 # target to generate assembly for a file
 test_procesamiento_gpu.cu.s:
-	cd /home/david/Luminis/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/run_tests.dir/build.make test/CMakeFiles/run_tests.dir/test_procesamiento_gpu.cu.s
+	cd /mnt/shared/Luminis/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/run_tests.dir/build.make test/CMakeFiles/run_tests.dir/test_procesamiento_gpu.cu.s
 .PHONY : test_procesamiento_gpu.cu.s
 
 # Help Target
@@ -339,6 +339,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/david/Luminis/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /mnt/shared/Luminis/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

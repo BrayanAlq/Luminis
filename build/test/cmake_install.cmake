@@ -1,4 +1,4 @@
-# Install script for directory: /home/david/Luminis/src/test
+# Install script for directory: /mnt/shared/Luminis/src/test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

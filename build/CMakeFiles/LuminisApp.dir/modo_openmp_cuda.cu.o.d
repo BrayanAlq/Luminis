@@ -1,4 +1,4 @@
-CMakeFiles/LuminisApp.dir/modo_openmp_cuda.cu.o : /home/david/Luminis/src/modo_openmp_cuda.cu \
+CMakeFiles/LuminisApp.dir/modo_openmp_cuda.cu.o : /mnt/shared/Luminis/src/modo_openmp_cuda.cu \
     /usr/include/stdc-predef.h \
     /usr/include/cuda_runtime.h \
     /usr/include/crt/host_config.h \
