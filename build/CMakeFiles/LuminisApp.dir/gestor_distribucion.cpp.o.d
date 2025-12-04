@@ -1,5 +1,5 @@
 CMakeFiles/LuminisApp.dir/gestor_distribucion.cpp.o: \
- /home/david/Luminis/src/gestor_distribucion.cpp \
+ /mnt/shared/Luminis/src/gestor_distribucion.cpp \
  /usr/include/stdc-predef.h /opt/openmpi-5.0.8/include/mpi.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
  /opt/openmpi-5.0.8/include/mpi_portable_platform.h \

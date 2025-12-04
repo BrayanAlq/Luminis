@@ -7,11 +7,11 @@ CUDA_DEFINES =
 
 CUDA_INCLUDES = --options-file CMakeFiles/LuminisApp.dir/includes_CUDA.rsp
 
-CUDA_FLAGS =  --expt-relaxed-constexpr -std=c++17 "--generate-code=arch=compute_52,code=[compute_52,sm_52]"
+CUDA_FLAGS =  --expt-relaxed-constexpr -std=c++17 "--generate-code=arch=compute_52,code=[compute_52,sm_52]" -Xcompiler=-fopenmp
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/david/Luminis/src -I/opt/openmpi-5.0.8/include -isystem /usr/include/opencv4
+CXX_INCLUDES = -I/mnt/shared/Luminis/src -I/opt/openmpi-5.0.8/include -isystem /usr/include/opencv4
 
-CXX_FLAGS = -std=gnu++17 -fopenmp
+CXX_FLAGS = -std=gnu++17 -fopenmp -fopenmp
 

@@ -1,3 +1,3 @@
-/home/david/Luminis/build/CMakeFiles/LuminisApp.dir
-/home/david/Luminis/build/CMakeFiles/edit_cache.dir
-/home/david/Luminis/build/CMakeFiles/rebuild_cache.dir
+/mnt/shared/Luminis/build/CMakeFiles/LuminisApp.dir
+/mnt/shared/Luminis/build/CMakeFiles/edit_cache.dir
+/mnt/shared/Luminis/build/CMakeFiles/rebuild_cache.dir

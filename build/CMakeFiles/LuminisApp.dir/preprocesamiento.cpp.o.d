@@ -1,5 +1,5 @@
 CMakeFiles/LuminisApp.dir/preprocesamiento.cpp.o: \
- /home/david/Luminis/src/preprocesamiento.cpp /usr/include/stdc-predef.h \
+ /mnt/shared/Luminis/src/preprocesamiento.cpp /usr/include/stdc-predef.h \
  /usr/include/opencv4/opencv2/opencv.hpp \
  /usr/include/opencv4/opencv2/opencv_modules.hpp \
  /usr/include/opencv4/opencv2/core.hpp \
@@ -352,6 +352,8 @@ CMakeFiles/LuminisApp.dir/preprocesamiento.cpp.o: \
  /usr/include/opencv4/opencv2/video/tracking.hpp \
  /usr/include/opencv4/opencv2/video/background_segm.hpp \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/omp.h \
+ /opt/openmpi-5.0.8/include/mpi.h \
+ /opt/openmpi-5.0.8/include/mpi_portable_platform.h \
  /usr/include/c++/13/filesystem /usr/include/c++/13/bits/fs_fwd.h \
  /usr/include/c++/13/bits/fs_path.h /usr/include/c++/13/codecvt \
  /usr/include/c++/13/bits/fs_dir.h /usr/include/c++/13/bits/fs_ops.h

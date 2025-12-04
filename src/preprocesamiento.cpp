@@ -1,5 +1,6 @@
 #include <opencv2/opencv.hpp>
 #include <omp.h>
+#include <mpi.h>
 #include <vector>
 #include <string>
 #include <filesystem>
@@ -26,6 +27,10 @@ std::vector<std::string> listarImagenesEnCarpeta(const std::string& carpeta) {
 // Función de cálculo individual: Calcula Histograma, CDF y LUT (Optimizada con OpenMP)
 // -----------------------------------------------------------------------------
 std::vector<unsigned char> preprocesarImagenYCalcularLUT(const std::string& ruta) {
+    // Obtener rank del nodo MPI
+    int rank = 0;
+    MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+    
     cv::Mat img = cv::imread(ruta, cv::IMREAD_GRAYSCALE);
     vector<unsigned char> lut(256);
     
@@ -41,6 +46,10 @@ std::vector<unsigned char> preprocesarImagenYCalcularLUT(const std::string& ruta
     
     #pragma omp parallel 
     {
+        int thread_id = omp_get_thread_num();
+        int num_threads = omp_get_num_threads();
+        cout << "[HISTOGRAMA] Nodo " << rank << " - Hilo " << thread_id << " de " << num_threads << " activo" << endl;
+        
         vector<int> histLocal(256, 0); 
         
         #pragma omp for nowait
@@ -91,6 +100,35 @@ std::vector<unsigned char> preprocesarImagenYCalcularLUT(const std::string& ruta
         } else {
             double mapped_value = ((double)cdf[i] - cdf_min) / DENOMINATOR * L_MINUS_1;
             lut[i] = (unsigned char)std::min(255, std::max(0, (int)std::round(mapped_value)));
+        }
+    }
+    
+    // Imprimir información de hilos utilizados en el cálculo LUT
+    #pragma omp parallel
+    {
+        cout << "[LUT] Nodo " << rank << " - Hilo " << omp_get_thread_num() << " de " << omp_get_num_threads() << " activo" << endl;
+    }
+    
+    // Imprimir información de hilos utilizados en el cálculo LUT
+    #pragma omp parallel 
+    {
+        int thread_id = omp_get_thread_num();
+        int num_threads = omp_get_num_threads();
+        cout << "[HISTOGRAMA] Hilo " << thread_id << " de " << num_threads << " activo" << endl;
+        
+        vector<int> histLocal(256, 0); 
+        
+        #pragma omp for nowait
+        for (int r = 0; r < img.rows; ++r) {
+            const uchar* rowptr = img.ptr<uchar>(r);
+            for (int c = 0; c < img.cols; ++c) {
+                histLocal[rowptr[c]]++;
+            }
+        }
+        
+        #pragma omp critical
+        {
+            for (int k = 0; k < 256; ++k) hist[k] += histLocal[k];
         }
     }
     

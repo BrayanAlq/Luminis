@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/david/Luminis/src
+CMAKE_SOURCE_DIR = /mnt/shared/Luminis/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/david/Luminis/build
+CMAKE_BINARY_DIR = /mnt/shared/Luminis/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/LuminisApp.dir/depend.make
@@ -70,151 +70,151 @@ include CMakeFiles/LuminisApp.dir/progress.make
 include CMakeFiles/LuminisApp.dir/flags.make
 
 CMakeFiles/LuminisApp.dir/comunicacion_sync.cpp.o: CMakeFiles/LuminisApp.dir/flags.make
-CMakeFiles/LuminisApp.dir/comunicacion_sync.cpp.o: /home/david/Luminis/src/comunicacion_sync.cpp
+CMakeFiles/LuminisApp.dir/comunicacion_sync.cpp.o: /mnt/shared/Luminis/src/comunicacion_sync.cpp
 CMakeFiles/LuminisApp.dir/comunicacion_sync.cpp.o: CMakeFiles/LuminisApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/david/Luminis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/LuminisApp.dir/comunicacion_sync.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LuminisApp.dir/comunicacion_sync.cpp.o -MF CMakeFiles/LuminisApp.dir/comunicacion_sync.cpp.o.d -o CMakeFiles/LuminisApp.dir/comunicacion_sync.cpp.o -c /home/david/Luminis/src/comunicacion_sync.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/shared/Luminis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/LuminisApp.dir/comunicacion_sync.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LuminisApp.dir/comunicacion_sync.cpp.o -MF CMakeFiles/LuminisApp.dir/comunicacion_sync.cpp.o.d -o CMakeFiles/LuminisApp.dir/comunicacion_sync.cpp.o -c /mnt/shared/Luminis/src/comunicacion_sync.cpp
 
 CMakeFiles/LuminisApp.dir/comunicacion_sync.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LuminisApp.dir/comunicacion_sync.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/david/Luminis/src/comunicacion_sync.cpp > CMakeFiles/LuminisApp.dir/comunicacion_sync.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/shared/Luminis/src/comunicacion_sync.cpp > CMakeFiles/LuminisApp.dir/comunicacion_sync.cpp.i
 
 CMakeFiles/LuminisApp.dir/comunicacion_sync.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LuminisApp.dir/comunicacion_sync.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/david/Luminis/src/comunicacion_sync.cpp -o CMakeFiles/LuminisApp.dir/comunicacion_sync.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/shared/Luminis/src/comunicacion_sync.cpp -o CMakeFiles/LuminisApp.dir/comunicacion_sync.cpp.s
 
 CMakeFiles/LuminisApp.dir/control_global.cpp.o: CMakeFiles/LuminisApp.dir/flags.make
-CMakeFiles/LuminisApp.dir/control_global.cpp.o: /home/david/Luminis/src/control_global.cpp
+CMakeFiles/LuminisApp.dir/control_global.cpp.o: /mnt/shared/Luminis/src/control_global.cpp
 CMakeFiles/LuminisApp.dir/control_global.cpp.o: CMakeFiles/LuminisApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/david/Luminis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/LuminisApp.dir/control_global.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LuminisApp.dir/control_global.cpp.o -MF CMakeFiles/LuminisApp.dir/control_global.cpp.o.d -o CMakeFiles/LuminisApp.dir/control_global.cpp.o -c /home/david/Luminis/src/control_global.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/shared/Luminis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/LuminisApp.dir/control_global.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LuminisApp.dir/control_global.cpp.o -MF CMakeFiles/LuminisApp.dir/control_global.cpp.o.d -o CMakeFiles/LuminisApp.dir/control_global.cpp.o -c /mnt/shared/Luminis/src/control_global.cpp
 
 CMakeFiles/LuminisApp.dir/control_global.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LuminisApp.dir/control_global.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/david/Luminis/src/control_global.cpp > CMakeFiles/LuminisApp.dir/control_global.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/shared/Luminis/src/control_global.cpp > CMakeFiles/LuminisApp.dir/control_global.cpp.i
 
 CMakeFiles/LuminisApp.dir/control_global.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LuminisApp.dir/control_global.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/david/Luminis/src/control_global.cpp -o CMakeFiles/LuminisApp.dir/control_global.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/shared/Luminis/src/control_global.cpp -o CMakeFiles/LuminisApp.dir/control_global.cpp.s
 
 CMakeFiles/LuminisApp.dir/gestor_distribucion.cpp.o: CMakeFiles/LuminisApp.dir/flags.make
-CMakeFiles/LuminisApp.dir/gestor_distribucion.cpp.o: /home/david/Luminis/src/gestor_distribucion.cpp
+CMakeFiles/LuminisApp.dir/gestor_distribucion.cpp.o: /mnt/shared/Luminis/src/gestor_distribucion.cpp
 CMakeFiles/LuminisApp.dir/gestor_distribucion.cpp.o: CMakeFiles/LuminisApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/david/Luminis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/LuminisApp.dir/gestor_distribucion.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LuminisApp.dir/gestor_distribucion.cpp.o -MF CMakeFiles/LuminisApp.dir/gestor_distribucion.cpp.o.d -o CMakeFiles/LuminisApp.dir/gestor_distribucion.cpp.o -c /home/david/Luminis/src/gestor_distribucion.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/shared/Luminis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/LuminisApp.dir/gestor_distribucion.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LuminisApp.dir/gestor_distribucion.cpp.o -MF CMakeFiles/LuminisApp.dir/gestor_distribucion.cpp.o.d -o CMakeFiles/LuminisApp.dir/gestor_distribucion.cpp.o -c /mnt/shared/Luminis/src/gestor_distribucion.cpp
 
 CMakeFiles/LuminisApp.dir/gestor_distribucion.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LuminisApp.dir/gestor_distribucion.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/david/Luminis/src/gestor_distribucion.cpp > CMakeFiles/LuminisApp.dir/gestor_distribucion.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/shared/Luminis/src/gestor_distribucion.cpp > CMakeFiles/LuminisApp.dir/gestor_distribucion.cpp.i
 
 CMakeFiles/LuminisApp.dir/gestor_distribucion.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LuminisApp.dir/gestor_distribucion.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/david/Luminis/src/gestor_distribucion.cpp -o CMakeFiles/LuminisApp.dir/gestor_distribucion.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/shared/Luminis/src/gestor_distribucion.cpp -o CMakeFiles/LuminisApp.dir/gestor_distribucion.cpp.s
 
 CMakeFiles/LuminisApp.dir/main.cpp.o: CMakeFiles/LuminisApp.dir/flags.make
-CMakeFiles/LuminisApp.dir/main.cpp.o: /home/david/Luminis/src/main.cpp
+CMakeFiles/LuminisApp.dir/main.cpp.o: /mnt/shared/Luminis/src/main.cpp
 CMakeFiles/LuminisApp.dir/main.cpp.o: CMakeFiles/LuminisApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/david/Luminis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/LuminisApp.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LuminisApp.dir/main.cpp.o -MF CMakeFiles/LuminisApp.dir/main.cpp.o.d -o CMakeFiles/LuminisApp.dir/main.cpp.o -c /home/david/Luminis/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/shared/Luminis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/LuminisApp.dir/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LuminisApp.dir/main.cpp.o -MF CMakeFiles/LuminisApp.dir/main.cpp.o.d -o CMakeFiles/LuminisApp.dir/main.cpp.o -c /mnt/shared/Luminis/src/main.cpp
 
 CMakeFiles/LuminisApp.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LuminisApp.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/david/Luminis/src/main.cpp > CMakeFiles/LuminisApp.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/shared/Luminis/src/main.cpp > CMakeFiles/LuminisApp.dir/main.cpp.i
 
 CMakeFiles/LuminisApp.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LuminisApp.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/david/Luminis/src/main.cpp -o CMakeFiles/LuminisApp.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/shared/Luminis/src/main.cpp -o CMakeFiles/LuminisApp.dir/main.cpp.s
 
 CMakeFiles/LuminisApp.dir/postprocesamiento.cpp.o: CMakeFiles/LuminisApp.dir/flags.make
-CMakeFiles/LuminisApp.dir/postprocesamiento.cpp.o: /home/david/Luminis/src/postprocesamiento.cpp
+CMakeFiles/LuminisApp.dir/postprocesamiento.cpp.o: /mnt/shared/Luminis/src/postprocesamiento.cpp
 CMakeFiles/LuminisApp.dir/postprocesamiento.cpp.o: CMakeFiles/LuminisApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/david/Luminis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/LuminisApp.dir/postprocesamiento.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LuminisApp.dir/postprocesamiento.cpp.o -MF CMakeFiles/LuminisApp.dir/postprocesamiento.cpp.o.d -o CMakeFiles/LuminisApp.dir/postprocesamiento.cpp.o -c /home/david/Luminis/src/postprocesamiento.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/shared/Luminis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/LuminisApp.dir/postprocesamiento.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LuminisApp.dir/postprocesamiento.cpp.o -MF CMakeFiles/LuminisApp.dir/postprocesamiento.cpp.o.d -o CMakeFiles/LuminisApp.dir/postprocesamiento.cpp.o -c /mnt/shared/Luminis/src/postprocesamiento.cpp
 
 CMakeFiles/LuminisApp.dir/postprocesamiento.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LuminisApp.dir/postprocesamiento.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/david/Luminis/src/postprocesamiento.cpp > CMakeFiles/LuminisApp.dir/postprocesamiento.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/shared/Luminis/src/postprocesamiento.cpp > CMakeFiles/LuminisApp.dir/postprocesamiento.cpp.i
 
 CMakeFiles/LuminisApp.dir/postprocesamiento.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LuminisApp.dir/postprocesamiento.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/david/Luminis/src/postprocesamiento.cpp -o CMakeFiles/LuminisApp.dir/postprocesamiento.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/shared/Luminis/src/postprocesamiento.cpp -o CMakeFiles/LuminisApp.dir/postprocesamiento.cpp.s
 
 CMakeFiles/LuminisApp.dir/preprocesamiento.cpp.o: CMakeFiles/LuminisApp.dir/flags.make
-CMakeFiles/LuminisApp.dir/preprocesamiento.cpp.o: /home/david/Luminis/src/preprocesamiento.cpp
+CMakeFiles/LuminisApp.dir/preprocesamiento.cpp.o: /mnt/shared/Luminis/src/preprocesamiento.cpp
 CMakeFiles/LuminisApp.dir/preprocesamiento.cpp.o: CMakeFiles/LuminisApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/david/Luminis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/LuminisApp.dir/preprocesamiento.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LuminisApp.dir/preprocesamiento.cpp.o -MF CMakeFiles/LuminisApp.dir/preprocesamiento.cpp.o.d -o CMakeFiles/LuminisApp.dir/preprocesamiento.cpp.o -c /home/david/Luminis/src/preprocesamiento.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/shared/Luminis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/LuminisApp.dir/preprocesamiento.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LuminisApp.dir/preprocesamiento.cpp.o -MF CMakeFiles/LuminisApp.dir/preprocesamiento.cpp.o.d -o CMakeFiles/LuminisApp.dir/preprocesamiento.cpp.o -c /mnt/shared/Luminis/src/preprocesamiento.cpp
 
 CMakeFiles/LuminisApp.dir/preprocesamiento.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LuminisApp.dir/preprocesamiento.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/david/Luminis/src/preprocesamiento.cpp > CMakeFiles/LuminisApp.dir/preprocesamiento.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/shared/Luminis/src/preprocesamiento.cpp > CMakeFiles/LuminisApp.dir/preprocesamiento.cpp.i
 
 CMakeFiles/LuminisApp.dir/preprocesamiento.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LuminisApp.dir/preprocesamiento.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/david/Luminis/src/preprocesamiento.cpp -o CMakeFiles/LuminisApp.dir/preprocesamiento.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/shared/Luminis/src/preprocesamiento.cpp -o CMakeFiles/LuminisApp.dir/preprocesamiento.cpp.s
 
 CMakeFiles/LuminisApp.dir/modo_serial.cpp.o: CMakeFiles/LuminisApp.dir/flags.make
-CMakeFiles/LuminisApp.dir/modo_serial.cpp.o: /home/david/Luminis/src/modo_serial.cpp
+CMakeFiles/LuminisApp.dir/modo_serial.cpp.o: /mnt/shared/Luminis/src/modo_serial.cpp
 CMakeFiles/LuminisApp.dir/modo_serial.cpp.o: CMakeFiles/LuminisApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/david/Luminis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/LuminisApp.dir/modo_serial.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LuminisApp.dir/modo_serial.cpp.o -MF CMakeFiles/LuminisApp.dir/modo_serial.cpp.o.d -o CMakeFiles/LuminisApp.dir/modo_serial.cpp.o -c /home/david/Luminis/src/modo_serial.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/shared/Luminis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/LuminisApp.dir/modo_serial.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LuminisApp.dir/modo_serial.cpp.o -MF CMakeFiles/LuminisApp.dir/modo_serial.cpp.o.d -o CMakeFiles/LuminisApp.dir/modo_serial.cpp.o -c /mnt/shared/Luminis/src/modo_serial.cpp
 
 CMakeFiles/LuminisApp.dir/modo_serial.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LuminisApp.dir/modo_serial.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/david/Luminis/src/modo_serial.cpp > CMakeFiles/LuminisApp.dir/modo_serial.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/shared/Luminis/src/modo_serial.cpp > CMakeFiles/LuminisApp.dir/modo_serial.cpp.i
 
 CMakeFiles/LuminisApp.dir/modo_serial.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LuminisApp.dir/modo_serial.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/david/Luminis/src/modo_serial.cpp -o CMakeFiles/LuminisApp.dir/modo_serial.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/shared/Luminis/src/modo_serial.cpp -o CMakeFiles/LuminisApp.dir/modo_serial.cpp.s
 
 CMakeFiles/LuminisApp.dir/modo_mpi_openmp_cuda.cpp.o: CMakeFiles/LuminisApp.dir/flags.make
-CMakeFiles/LuminisApp.dir/modo_mpi_openmp_cuda.cpp.o: /home/david/Luminis/src/modo_mpi_openmp_cuda.cpp
+CMakeFiles/LuminisApp.dir/modo_mpi_openmp_cuda.cpp.o: /mnt/shared/Luminis/src/modo_mpi_openmp_cuda.cpp
 CMakeFiles/LuminisApp.dir/modo_mpi_openmp_cuda.cpp.o: CMakeFiles/LuminisApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/david/Luminis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/LuminisApp.dir/modo_mpi_openmp_cuda.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LuminisApp.dir/modo_mpi_openmp_cuda.cpp.o -MF CMakeFiles/LuminisApp.dir/modo_mpi_openmp_cuda.cpp.o.d -o CMakeFiles/LuminisApp.dir/modo_mpi_openmp_cuda.cpp.o -c /home/david/Luminis/src/modo_mpi_openmp_cuda.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/shared/Luminis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/LuminisApp.dir/modo_mpi_openmp_cuda.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LuminisApp.dir/modo_mpi_openmp_cuda.cpp.o -MF CMakeFiles/LuminisApp.dir/modo_mpi_openmp_cuda.cpp.o.d -o CMakeFiles/LuminisApp.dir/modo_mpi_openmp_cuda.cpp.o -c /mnt/shared/Luminis/src/modo_mpi_openmp_cuda.cpp
 
 CMakeFiles/LuminisApp.dir/modo_mpi_openmp_cuda.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LuminisApp.dir/modo_mpi_openmp_cuda.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/david/Luminis/src/modo_mpi_openmp_cuda.cpp > CMakeFiles/LuminisApp.dir/modo_mpi_openmp_cuda.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/shared/Luminis/src/modo_mpi_openmp_cuda.cpp > CMakeFiles/LuminisApp.dir/modo_mpi_openmp_cuda.cpp.i
 
 CMakeFiles/LuminisApp.dir/modo_mpi_openmp_cuda.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LuminisApp.dir/modo_mpi_openmp_cuda.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/david/Luminis/src/modo_mpi_openmp_cuda.cpp -o CMakeFiles/LuminisApp.dir/modo_mpi_openmp_cuda.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/shared/Luminis/src/modo_mpi_openmp_cuda.cpp -o CMakeFiles/LuminisApp.dir/modo_mpi_openmp_cuda.cpp.s
 
 CMakeFiles/LuminisApp.dir/filesystem_utils.cpp.o: CMakeFiles/LuminisApp.dir/flags.make
-CMakeFiles/LuminisApp.dir/filesystem_utils.cpp.o: /home/david/Luminis/src/filesystem_utils.cpp
+CMakeFiles/LuminisApp.dir/filesystem_utils.cpp.o: /mnt/shared/Luminis/src/filesystem_utils.cpp
 CMakeFiles/LuminisApp.dir/filesystem_utils.cpp.o: CMakeFiles/LuminisApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/david/Luminis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/LuminisApp.dir/filesystem_utils.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LuminisApp.dir/filesystem_utils.cpp.o -MF CMakeFiles/LuminisApp.dir/filesystem_utils.cpp.o.d -o CMakeFiles/LuminisApp.dir/filesystem_utils.cpp.o -c /home/david/Luminis/src/filesystem_utils.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/shared/Luminis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/LuminisApp.dir/filesystem_utils.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LuminisApp.dir/filesystem_utils.cpp.o -MF CMakeFiles/LuminisApp.dir/filesystem_utils.cpp.o.d -o CMakeFiles/LuminisApp.dir/filesystem_utils.cpp.o -c /mnt/shared/Luminis/src/filesystem_utils.cpp
 
 CMakeFiles/LuminisApp.dir/filesystem_utils.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LuminisApp.dir/filesystem_utils.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/david/Luminis/src/filesystem_utils.cpp > CMakeFiles/LuminisApp.dir/filesystem_utils.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/shared/Luminis/src/filesystem_utils.cpp > CMakeFiles/LuminisApp.dir/filesystem_utils.cpp.i
 
 CMakeFiles/LuminisApp.dir/filesystem_utils.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LuminisApp.dir/filesystem_utils.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/david/Luminis/src/filesystem_utils.cpp -o CMakeFiles/LuminisApp.dir/filesystem_utils.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/shared/Luminis/src/filesystem_utils.cpp -o CMakeFiles/LuminisApp.dir/filesystem_utils.cpp.s
 
 CMakeFiles/LuminisApp.dir/placeholder.cpp.o: CMakeFiles/LuminisApp.dir/flags.make
-CMakeFiles/LuminisApp.dir/placeholder.cpp.o: /home/david/Luminis/src/placeholder.cpp
+CMakeFiles/LuminisApp.dir/placeholder.cpp.o: /mnt/shared/Luminis/src/placeholder.cpp
 CMakeFiles/LuminisApp.dir/placeholder.cpp.o: CMakeFiles/LuminisApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/david/Luminis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/LuminisApp.dir/placeholder.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LuminisApp.dir/placeholder.cpp.o -MF CMakeFiles/LuminisApp.dir/placeholder.cpp.o.d -o CMakeFiles/LuminisApp.dir/placeholder.cpp.o -c /home/david/Luminis/src/placeholder.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/shared/Luminis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/LuminisApp.dir/placeholder.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LuminisApp.dir/placeholder.cpp.o -MF CMakeFiles/LuminisApp.dir/placeholder.cpp.o.d -o CMakeFiles/LuminisApp.dir/placeholder.cpp.o -c /mnt/shared/Luminis/src/placeholder.cpp
 
 CMakeFiles/LuminisApp.dir/placeholder.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LuminisApp.dir/placeholder.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/david/Luminis/src/placeholder.cpp > CMakeFiles/LuminisApp.dir/placeholder.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/shared/Luminis/src/placeholder.cpp > CMakeFiles/LuminisApp.dir/placeholder.cpp.i
 
 CMakeFiles/LuminisApp.dir/placeholder.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LuminisApp.dir/placeholder.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/david/Luminis/src/placeholder.cpp -o CMakeFiles/LuminisApp.dir/placeholder.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/shared/Luminis/src/placeholder.cpp -o CMakeFiles/LuminisApp.dir/placeholder.cpp.s
 
 CMakeFiles/LuminisApp.dir/modo_openmp_cuda.cu.o: CMakeFiles/LuminisApp.dir/flags.make
 CMakeFiles/LuminisApp.dir/modo_openmp_cuda.cu.o: CMakeFiles/LuminisApp.dir/includes_CUDA.rsp
-CMakeFiles/LuminisApp.dir/modo_openmp_cuda.cu.o: /home/david/Luminis/src/modo_openmp_cuda.cu
+CMakeFiles/LuminisApp.dir/modo_openmp_cuda.cu.o: /mnt/shared/Luminis/src/modo_openmp_cuda.cu
 CMakeFiles/LuminisApp.dir/modo_openmp_cuda.cu.o: CMakeFiles/LuminisApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/david/Luminis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CUDA object CMakeFiles/LuminisApp.dir/modo_openmp_cuda.cu.o"
-	/usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT CMakeFiles/LuminisApp.dir/modo_openmp_cuda.cu.o -MF CMakeFiles/LuminisApp.dir/modo_openmp_cuda.cu.o.d -x cu -c /home/david/Luminis/src/modo_openmp_cuda.cu -o CMakeFiles/LuminisApp.dir/modo_openmp_cuda.cu.o
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/shared/Luminis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CUDA object CMakeFiles/LuminisApp.dir/modo_openmp_cuda.cu.o"
+	/usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT CMakeFiles/LuminisApp.dir/modo_openmp_cuda.cu.o -MF CMakeFiles/LuminisApp.dir/modo_openmp_cuda.cu.o.d -x cu -c /mnt/shared/Luminis/src/modo_openmp_cuda.cu -o CMakeFiles/LuminisApp.dir/modo_openmp_cuda.cu.o
 
 CMakeFiles/LuminisApp.dir/modo_openmp_cuda.cu.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CUDA source to CMakeFiles/LuminisApp.dir/modo_openmp_cuda.cu.i"
@@ -226,10 +226,10 @@ CMakeFiles/LuminisApp.dir/modo_openmp_cuda.cu.s: cmake_force
 
 CMakeFiles/LuminisApp.dir/procesamiento_gpu.cu.o: CMakeFiles/LuminisApp.dir/flags.make
 CMakeFiles/LuminisApp.dir/procesamiento_gpu.cu.o: CMakeFiles/LuminisApp.dir/includes_CUDA.rsp
-CMakeFiles/LuminisApp.dir/procesamiento_gpu.cu.o: /home/david/Luminis/src/procesamiento_gpu.cu
+CMakeFiles/LuminisApp.dir/procesamiento_gpu.cu.o: /mnt/shared/Luminis/src/procesamiento_gpu.cu
 CMakeFiles/LuminisApp.dir/procesamiento_gpu.cu.o: CMakeFiles/LuminisApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/david/Luminis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CUDA object CMakeFiles/LuminisApp.dir/procesamiento_gpu.cu.o"
-	/usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT CMakeFiles/LuminisApp.dir/procesamiento_gpu.cu.o -MF CMakeFiles/LuminisApp.dir/procesamiento_gpu.cu.o.d -x cu -c /home/david/Luminis/src/procesamiento_gpu.cu -o CMakeFiles/LuminisApp.dir/procesamiento_gpu.cu.o
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/shared/Luminis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CUDA object CMakeFiles/LuminisApp.dir/procesamiento_gpu.cu.o"
+	/usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT CMakeFiles/LuminisApp.dir/procesamiento_gpu.cu.o -MF CMakeFiles/LuminisApp.dir/procesamiento_gpu.cu.o.d -x cu -c /mnt/shared/Luminis/src/procesamiento_gpu.cu -o CMakeFiles/LuminisApp.dir/procesamiento_gpu.cu.o
 
 CMakeFiles/LuminisApp.dir/procesamiento_gpu.cu.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CUDA source to CMakeFiles/LuminisApp.dir/procesamiento_gpu.cu.i"
@@ -329,7 +329,7 @@ LuminisApp: /usr/lib/x86_64-linux-gnu/libopencv_photo.so.4.6.0
 LuminisApp: /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.4.6.0
 LuminisApp: /usr/lib/x86_64-linux-gnu/libopencv_core.so.4.6.0
 LuminisApp: CMakeFiles/LuminisApp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/david/Luminis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable LuminisApp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/shared/Luminis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable LuminisApp"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/LuminisApp.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -341,6 +341,6 @@ CMakeFiles/LuminisApp.dir/clean:
 .PHONY : CMakeFiles/LuminisApp.dir/clean
 
 CMakeFiles/LuminisApp.dir/depend:
-	cd /home/david/Luminis/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/david/Luminis/src /home/david/Luminis/src /home/david/Luminis/build /home/david/Luminis/build /home/david/Luminis/build/CMakeFiles/LuminisApp.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /mnt/shared/Luminis/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/shared/Luminis/src /mnt/shared/Luminis/src /mnt/shared/Luminis/build /mnt/shared/Luminis/build /mnt/shared/Luminis/build/CMakeFiles/LuminisApp.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/LuminisApp.dir/depend
 

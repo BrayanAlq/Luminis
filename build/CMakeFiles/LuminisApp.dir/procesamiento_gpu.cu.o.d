@@ -1,4 +1,4 @@
-CMakeFiles/LuminisApp.dir/procesamiento_gpu.cu.o : /home/david/Luminis/src/procesamiento_gpu.cu \
+CMakeFiles/LuminisApp.dir/procesamiento_gpu.cu.o : /mnt/shared/Luminis/src/procesamiento_gpu.cu \
     /usr/include/stdc-predef.h \
     /usr/include/cuda_runtime.h \
     /usr/include/crt/host_config.h \
